@@ -19,7 +19,7 @@ int detalheObra() {
     al_install_mouse();
 
     ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
-    al_set_window_position(display, 200, 30);
+    al_set_window_position(display, 10, 30);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
     ALLEGRO_FONT* font_text = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 30, 0);
@@ -79,5 +79,5 @@ int detalheObra() {
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
 
-    return 0;
+    return 1;
 }

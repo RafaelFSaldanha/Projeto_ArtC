@@ -19,7 +19,7 @@ int vanguardas() {
     al_install_mouse();
 
     ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
-    al_set_window_position(display, 200, 30);
+    al_set_window_position(display, 10, 30);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
     ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70, 0);
@@ -34,7 +34,7 @@ int vanguardas() {
     al_set_mouse_cursor(display, cursor);
     al_show_mouse_cursor(display);
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/Moldura.png");
-
+    int novaTela = 1;
     while (true) {
 
         ALLEGRO_EVENT event;
@@ -50,11 +50,25 @@ int vanguardas() {
         int r = 0;
         int g = 0;
         int b = 0;
+        
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
         al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -70, 2150, 1160, 0);
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Vanguardas");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Vanguardas");
+
+        if (mouseX > WIDTH / 4 - 200 && mouseX < WIDTH / 4 + 200 && mouseY > 300 && mouseY < 525) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
 
         al_draw_filled_rectangle(WIDTH / 4 - 200, 300, WIDTH / 4 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 4, 400, ALLEGRO_ALIGN_CENTER, "Renascentismo");
@@ -86,5 +100,5 @@ int vanguardas() {
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
 
-    return 0;
+    return novaTela;
 }

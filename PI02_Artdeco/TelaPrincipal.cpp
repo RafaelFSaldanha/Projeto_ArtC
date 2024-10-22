@@ -18,7 +18,7 @@ int telaInicial() {
     al_install_mouse();
 
     ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
-    al_set_window_position(display, 200, 30);
+    al_set_window_position(display, 10, 30);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
     ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/Cinzel-Regular.ttf", 70, 0);
@@ -64,7 +64,7 @@ int telaInicial() {
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "ArtDeco");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "ArtDeco");
 
-        if (mouseX > (WIDTH / 2) - 100 && mouseX < (WIDTH / 2) + 100 && mouseY > 360 && mouseY < 400) {
+        if (mouseX > (WIDTH / 2) - 100 && mouseX < (WIDTH / 2) + 100 && mouseY > 400 && mouseY < 440) {
             r = 225;
             g = 190;
             b = 0;
@@ -79,10 +79,10 @@ int telaInicial() {
         char buffer[50]; // Buffer para a string formatada
 
         // Formatar a string
-        snprintf(buffer, sizeof(buffer), "Jogar: %d", mouseX);
+        snprintf(buffer, sizeof(buffer), "Jogar");
 
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, buffer);
+        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, "Jogar");
 
         if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 500 && mouseY < 540) {
             r = 225;
@@ -125,6 +125,20 @@ int telaInicial() {
         }
         else { r = 0; g = 0; b = 0; }
         al_draw_textf(font_options, al_map_rgb(r, g, b), WIDTH / 2, 700, ALLEGRO_ALIGN_CENTER, "Opções");
+
+        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 800 && mouseY < 840) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 7;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
+        al_draw_textf(font_options, al_map_rgb(r, g, b), WIDTH / 2, 800, ALLEGRO_ALIGN_CENTER, "Estilizar");
 
         al_draw_filled_circle(295, 205, 30, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_circle(300, 200, 30, al_map_rgb(196, 196, 196));
