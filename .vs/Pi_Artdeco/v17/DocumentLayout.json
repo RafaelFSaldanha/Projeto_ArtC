@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|solutionrelative:game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\packages\\AllegroDeps.1.14.0\\build\\native\\AllegroDeps.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|solutionrelative:packages\\AllegroDeps.1.14.0\\build\\native\\AllegroDeps.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\Pi_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B65525B9-1894-4255-8ABE-FB0A35097133}|Pi_Artdeco.vcxproj|solutionrelative:Pi_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-22T16:56:28.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllegroDeps.targets",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\packages\\AllegroDeps.1.14.0\\build\\native\\AllegroDeps.targets",
+              "RelativeDocumentMoniker": "packages\\AllegroDeps.1.14.0\\build\\native\\AllegroDeps.targets",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\packages\\AllegroDeps.1.14.0\\build\\native\\AllegroDeps.targets",
+              "RelativeToolTip": "packages\\AllegroDeps.1.14.0\\build\\native\\AllegroDeps.targets",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-10-22T16:54:15.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pi_Artdeco.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\Pi_Artdeco.cpp",
+              "RelativeDocumentMoniker": "Pi_Artdeco.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\Pi_Artdeco.cpp",
+              "RelativeToolTip": "Pi_Artdeco.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-22T16:22:40.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "game.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\game.cpp",
+              "RelativeDocumentMoniker": "game.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\game.cpp",
+              "RelativeToolTip": "game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-22T16:16:57.621Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
