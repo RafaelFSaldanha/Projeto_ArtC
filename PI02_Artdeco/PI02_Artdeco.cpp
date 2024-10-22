@@ -17,49 +17,52 @@ const int WIDTH = 1910;
 const int HEIGHT = 990;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, FASES, GAME, OPTIONS, OBRA, VANGUARDAS, VISUALS };
-TelaAtiva telaAtual = DEBUG;
+int telaAtual = 1;
 
 
 int main() {
+    while (telaAtual != 0) {
+        if (telaAtual == -1) {
+            telaInicial();
+            fases();
+            gameLogic();
+            gameView();
+            opcoes();
+            detalheObra();
+            vanguardas();
+            personalizacao();
+        }
 
-    if (telaAtual == DEBUG) {
-        telaInicial();
-        fases();
-        gameLogic();
-        gameView();
-        opcoes();
-        detalheObra();
-        vanguardas();
-        personalizacao();
+        if (telaAtual == 1) {
+            telaAtual = telaInicial();
+        }
+
+        if (telaAtual == 2) {
+            telaAtual = fases();
+        }
+
+        if (telaAtual == 3) {
+            telaAtual = gameView();
+            //gameLogic();
+        }
+
+        if (telaAtual == 4) {
+            telaAtual = opcoes();
+        }
+
+        if (telaAtual == 5) {
+            telaAtual = detalheObra();
+        }
+
+        if (telaAtual == 6) {
+            telaAtual = vanguardas();
+        }
+
+        if (telaAtual == 7) {
+            telaAtual = personalizacao();
+        }
     }
 
-    if (telaAtual == PRINCIPAL) {
-        telaInicial();
-    }
-
-    if (telaAtual == FASES) {
-        fases();
-    }
-
-    if (telaAtual == GAME) {
-        gameLogic();
-        gameView();
-    }
-
-    if (telaAtual == OPTIONS) {
-        opcoes();
-    }
-
-    if (telaAtual == OBRA) {
-        detalheObra();
-    }
-
-    if (telaAtual == VANGUARDAS) {
-        vanguardas();
-    }
-
-    if (telaAtual == VISUALS) {
-        personalizacao();
-    }
+    
     return 0;
 }

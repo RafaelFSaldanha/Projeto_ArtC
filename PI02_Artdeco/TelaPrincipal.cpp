@@ -38,7 +38,7 @@ int telaInicial() {
     ALLEGRO_BITMAP* o_grito = al_load_bitmap("./assets/img/o_grito.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
     ALLEGRO_BITMAP* bandeirantes = al_load_bitmap("./assets/img/retirantes.png");
-
+    int novaTela = 0;
     while (true) {
 
         ALLEGRO_EVENT event;
@@ -64,29 +64,67 @@ int telaInicial() {
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "ArtDeco");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "ArtDeco");
 
-        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 400 && mouseY < 440) {
+        if (mouseX > (WIDTH / 2) - 100 && mouseX < (WIDTH / 2) + 100 && mouseY > 360 && mouseY < 400) {
             r = 225;
             g = 190;
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
+                novaTela = 3;
+                break;
+                
             }
         }
         else { b = 0; }
+        char buffer[50]; // Buffer para a string formatada
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, "Jogar");
+        // Formatar a string
+        snprintf(buffer, sizeof(buffer), "Jogar: %d", mouseX);
 
-        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 500 && mouseY < 540) { r = 225; g = 190; b = 0; }
+
+        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, buffer);
+
+        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 500 && mouseY < 540) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 6;
+                break;
+
+            }
+        }
         else { r = 0; g = 0; b = 0; }
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 500, ALLEGRO_ALIGN_CENTER, "Niveis");
 
-        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 600 && mouseY < 640) { r = 225; g = 190; b = 0; }
+        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 600 && mouseY < 640) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 5;
+                break;
+
+            }
+        }
         else { r = 0; g = 0; b = 0; }
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 600, ALLEGRO_ALIGN_CENTER, "Galeria");
 
-        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 700 && mouseY < 740) { r = 225; g = 190; b = 0; }
+        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 700 && mouseY < 740) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 4;
+                break;
+
+            }
+        }
         else { r = 0; g = 0; b = 0; }
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 700, ALLEGRO_ALIGN_CENTER, "Opcoes");
+        al_draw_textf(font_options, al_map_rgb(r, g, b), WIDTH / 2, 700, ALLEGRO_ALIGN_CENTER, "Opções");
 
         al_draw_filled_circle(295, 205, 30, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_circle(300, 200, 30, al_map_rgb(196, 196, 196));
@@ -105,5 +143,5 @@ int telaInicial() {
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
 
-    return 0;
+    return novaTela;
 }
