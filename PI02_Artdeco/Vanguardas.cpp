@@ -73,18 +73,82 @@ int vanguardas() {
         al_draw_filled_rectangle(WIDTH / 4 - 200, 300, WIDTH / 4 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 4, 400, ALLEGRO_ALIGN_CENTER, "Renascentismo");
 
+        if (mouseX > WIDTH / 4 - 200 && mouseX < WIDTH / 4 + 200 && mouseY > 575 && mouseY < 800) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
+
         al_draw_filled_rectangle(WIDTH / 4 - 200, 575, WIDTH / 4 + 200, 800, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 4, 675, ALLEGRO_ALIGN_CENTER, "Cubismo");
 
+        if (mouseX > WIDTH / 2 - 200 && mouseX < WIDTH / 2 + 200 && mouseY > 300 && mouseY < 525) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
 
         al_draw_filled_rectangle(WIDTH / 2 - 200, 300, WIDTH / 2 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, "Impressionismo");
 
+        if (mouseX > WIDTH / 2 - 200 && mouseX < WIDTH / 2 + 200 && mouseY > 575 && mouseY < 800) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
+
         al_draw_filled_rectangle(WIDTH / 2 - 200, 575, WIDTH / 2 + 200, 800, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 675, ALLEGRO_ALIGN_CENTER, "Futurismo");
 
+        if (mouseX > WIDTH / 2 + WIDTH / 4 - 200 && mouseX < WIDTH / 2 + WIDTH / 4 + 200 && mouseY > 300 && mouseY < 525) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
+
         al_draw_filled_rectangle(WIDTH / 2 + WIDTH / 4 - 200, 300, WIDTH / 2 + WIDTH / 4 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2 + WIDTH / 4, 400, ALLEGRO_ALIGN_CENTER, "Surrealismo");
+
+        if (mouseX > WIDTH / 2 + WIDTH / 4 - 200 && mouseX < WIDTH / 2 + WIDTH / 4 + 200 && mouseY > 575 && mouseY < 800) {
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
+        }
+        else { r = 0; g = 0; b = 0; }
 
         al_draw_filled_rectangle(WIDTH / 2 + WIDTH / 4 - 200, 575, WIDTH / 2 + WIDTH / 4 + 200, 800, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2 + WIDTH / 4, 675, ALLEGRO_ALIGN_CENTER, "Expressionismo");

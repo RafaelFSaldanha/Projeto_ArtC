@@ -34,8 +34,8 @@ int telaInicial() {
     al_set_mouse_cursor(display, cursor);
     al_show_mouse_cursor(display);
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/Moldura.png");
-    ALLEGRO_BITMAP* monalisa = al_load_bitmap("./assets/img/monalisa.png");
-    ALLEGRO_BITMAP* o_grito = al_load_bitmap("./assets/img/o_grito.png");
+    ALLEGRO_BITMAP* monalisa = al_load_bitmap("./assets/img/monalisa2.png");
+    ALLEGRO_BITMAP* santa_ceia = al_load_bitmap("./assets/img/santa_ceia.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
     ALLEGRO_BITMAP* bandeirantes = al_load_bitmap("./assets/img/retirantes.png");
     int novaTela = 0;
@@ -56,11 +56,11 @@ int telaInicial() {
         int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
+        al_draw_scaled_rotated_bitmap(monalisa, al_get_bitmap_width(monalisa) / 2, al_get_bitmap_height(monalisa) / 2, 350, 700, 0.45, 0.45, 25 * ALLEGRO_PI / 180, 0);
+        al_draw_scaled_rotated_bitmap(noite_estrelada, al_get_bitmap_width(noite_estrelada) / 2, al_get_bitmap_height(noite_estrelada) / 2, 375, 200, 0.25, 0.25, 351 * ALLEGRO_PI / 180, 0);
+        al_draw_scaled_rotated_bitmap(santa_ceia, al_get_bitmap_width(santa_ceia) / 2, al_get_bitmap_height(santa_ceia) / 2, 1550, 210, 0.6, 0.6, 14 * ALLEGRO_PI / 180, 0);
+        al_draw_scaled_rotated_bitmap(bandeirantes, al_get_bitmap_width(bandeirantes) / 2, al_get_bitmap_height(bandeirantes) / 2, 1550, 700, 0.2, 0.2, 353 * ALLEGRO_PI / 180, 0);
         al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -70, 2150, 1160, 0);
-        al_draw_scaled_bitmap(monalisa, 0, 0, al_get_bitmap_width(monalisa), al_get_bitmap_height(monalisa), 450, 300, 200, 250, 0);
-        al_draw_scaled_bitmap(o_grito, 0, 0, al_get_bitmap_width(o_grito), al_get_bitmap_height(o_grito), 1300, 300, 200, 250, 0);
-        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 400, 600, 280, 170, 0);
-        al_draw_scaled_bitmap(bandeirantes, 0, 0, al_get_bitmap_width(bandeirantes), al_get_bitmap_height(bandeirantes), 1300, 600, 190, 200, 0);
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "ArtDeco");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "ArtDeco");
 
@@ -96,7 +96,7 @@ int telaInicial() {
             }
         }
         else { r = 0; g = 0; b = 0; }
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 500, ALLEGRO_ALIGN_CENTER, "Niveis");
+        al_draw_textf(font_options, al_map_rgb(r, g, b), WIDTH / 2, 500, ALLEGRO_ALIGN_CENTER, "Níveis");
 
         if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 600 && mouseY < 640) {
             r = 225;
@@ -125,20 +125,6 @@ int telaInicial() {
         }
         else { r = 0; g = 0; b = 0; }
         al_draw_textf(font_options, al_map_rgb(r, g, b), WIDTH / 2, 700, ALLEGRO_ALIGN_CENTER, "Opções");
-
-        if (mouseX > WIDTH / 2 - 100 && mouseX < WIDTH / 2 + 100 && mouseY > 800 && mouseY < 840) {
-            r = 225;
-            g = 190;
-            b = 0;
-            if (mouseB == 1) {
-                r = 0; g = 0; b = 0;
-                novaTela = 7;
-                break;
-
-            }
-        }
-        else { r = 0; g = 0; b = 0; }
-        al_draw_textf(font_options, al_map_rgb(r, g, b), WIDTH / 2, 800, ALLEGRO_ALIGN_CENTER, "Estilizar");
 
         al_draw_filled_circle(295, 205, 30, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_circle(300, 200, 30, al_map_rgb(196, 196, 196));

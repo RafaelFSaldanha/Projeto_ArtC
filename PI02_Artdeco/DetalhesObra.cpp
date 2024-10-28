@@ -56,17 +56,17 @@ int detalheObra() {
 
         al_draw_scaled_bitmap(monalisa_real, 0, 0, al_get_bitmap_width(monalisa_real), al_get_bitmap_height(monalisa_real), 300, 200, 300, 350, 0);
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 300, 600, 0, "Titulo: A Mona Lisa");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), 300, 600, 0, "Título: A Mona Lisa");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 300, 650, 0, "Autor: Leonardo da Vinci");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 300, 700, 0, "Localizacao: Louvre, Paris");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), 300, 700, 0, "Localização: Louvre, Paris");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 300, 750, 0, "Ano: 1503");
 
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 800, 200, 0, "Mona Lisa tambem conhecida como A Gioconda");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 800, 230, 0, "ou ainda Mona Lisa del Giocondo e a mais");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 800, 260, 0, "notável e conhecida obra de Leonardo da Vinci,");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), 800, 200, 0, "Mona Lisa também conhecida como A Gioconda");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), 800, 230, 0, "ou ainda Mona Lisa del Giocondo é a mais");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), 800, 260, 0, "notável e conhecida obra de Leonardo da Vinci,");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 800, 290, 0, "um dos mais eminentes homens do Renascimento");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 800, 320, 0, "italiano. Sua pintura foi iniciada em 1503 e e");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), 800, 320, 0, "italiano. Sua pintura foi iniciada em 1503 e é");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 800, 350, 0, "nesta obra que o artista melhor concebeu...");
 
         al_flip_display();

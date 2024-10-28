@@ -53,13 +53,13 @@ int opcoes() {
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
         al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -70, 2150, 1160, 0);
-        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Opcoes");
-        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Opcoes");
+        al_draw_textf(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Opções");
+        al_draw_textf(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Opções");
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), 795, 400, ALLEGRO_ALIGN_CENTER, "Som:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 830, 500, ALLEGRO_ALIGN_CENTER, "Musica:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 870, 600, ALLEGRO_ALIGN_CENTER, "Resolucao:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 805, 700, ALLEGRO_ALIGN_CENTER, "Dicas:");
+        al_draw_textf(font_options, al_map_rgb(r, g, b), 795, 400, ALLEGRO_ALIGN_CENTER, "Som:");
+        al_draw_textf(font_options, al_map_rgb(r, g, b), 830, 500, ALLEGRO_ALIGN_CENTER, "Música:");
+        al_draw_textf(font_options, al_map_rgb(r, g, b), 870, 600, ALLEGRO_ALIGN_CENTER, "Resolução:");
+        al_draw_textf(font_options, al_map_rgb(r, g, b), 805, 700, ALLEGRO_ALIGN_CENTER, "Dicas:");
 
         al_draw_filled_circle(295, 205, 30, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_circle(300, 200, 30, al_map_rgb(196, 196, 196));

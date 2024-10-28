@@ -58,7 +58,7 @@ int fases() {
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Renascentismo");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Renascentismo");
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), WIDTH / 2, 300, ALLEGRO_ALIGN_CENTER, "Renascimento ou Renascenca sao os termos usados para identificar o periodo da historia d...");
+        al_draw_textf(font_text, al_map_rgb(0, 0, 0), WIDTH / 2, 300, ALLEGRO_ALIGN_CENTER, "Renascimento ou Renascença são os termos usados para identificar o período da história d...");
 
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 400, 475, ALLEGRO_ALIGN_CENTER, "Mona lisa");
         al_draw_scaled_bitmap(monalisa_real, 0, 0, al_get_bitmap_width(monalisa_real), al_get_bitmap_height(monalisa_real), 300, 525, 200, 250, 0);
