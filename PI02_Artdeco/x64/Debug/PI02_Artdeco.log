@@ -1,2 +1,15 @@
-﻿  Options.cpp
-  PI02_Artdeco.vcxproj -> C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\x64\Debug\PI02_Artdeco.exe
+﻿  DetalhesObra.cpp
+  Fases.cpp
+  Game.cpp
+  Options.cpp
+  PI02_Artdeco.cpp
+  TelaPrincipal.cpp
+C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\PI02_Artdeco.cpp(28,13): error C2660: 'gameLogic': função não recebe 1 argumentos
+      C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\Game.h(6,5):
+      consulte a declaração de 'gameLogic'
+      C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\PI02_Artdeco.cpp(28,13):
+      ao tentar corresponder a lista de argumentos '(ALLEGRO_DISPLAY *)'
+  
+  Vanguardas.cpp
+  Visuals.cpp
+  Gerando Código...

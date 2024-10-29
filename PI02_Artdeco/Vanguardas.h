@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int vanguardas();
+int vanguardas(ALLEGRO_DISPLAY* display);
 #endif

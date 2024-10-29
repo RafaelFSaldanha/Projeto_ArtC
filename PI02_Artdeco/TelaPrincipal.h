@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int telaInicial();
+int telaInicial(ALLEGRO_DISPLAY* display);
 #endif

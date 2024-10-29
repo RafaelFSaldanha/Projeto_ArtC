@@ -9,7 +9,7 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-int opcoes() {
+int opcoes(ALLEGRO_DISPLAY* display) {
 
     al_init();
     al_init_font_addon();
@@ -18,12 +18,11 @@ int opcoes() {
     al_init_primitives_addon();
     al_install_mouse();
 
-    ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
     al_set_window_position(display, 0, 35);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
-    ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70, 0);
-    ALLEGRO_FONT* font_options = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 50, 0);
+    ALLEGRO_FONT* font_tittle = al_load_ttf_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70, ALLEGRO_TTF_NO_KERNING);
+    ALLEGRO_FONT* font_options = al_load_ttf_font("./assets/fonts/MontserratAlternates-Regular.ttf", 50, ALLEGRO_TTF_NO_KERNING);
     ALLEGRO_TIMER* timer = al_create_timer(1.0 / 60.0);
     ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -55,13 +54,13 @@ int opcoes() {
         al_clear_to_color(al_map_rgb(196, 196, 196));
         al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230, 125, 1500, 735, 0);
         al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -73, 2160, 1165, 0);
-        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Opções");
-        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Opções");
+        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, u8"Opções");
+        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, u8"Opções");
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), 795, 400, ALLEGRO_ALIGN_CENTER, "Som:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 830, 500, ALLEGRO_ALIGN_CENTER, "Música:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 870, 600, ALLEGRO_ALIGN_CENTER, "Resolução:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 805, 700, ALLEGRO_ALIGN_CENTER, "Dicas:");
+        al_draw_text(font_options, al_map_rgb(r, g, b), 795, 400, ALLEGRO_ALIGN_CENTER, u8"Som:");
+        al_draw_text(font_options, al_map_rgb(r, g, b), 830, 500, ALLEGRO_ALIGN_CENTER, u8"Música:");
+        al_draw_text(font_options, al_map_rgb(r, g, b), 870, 600, ALLEGRO_ALIGN_CENTER, u8"Resolução:");
+        al_draw_text(font_options, al_map_rgb(r, g, b), 805, 700, ALLEGRO_ALIGN_CENTER, u8"Dicas:");
 
         if (mouseX > 270 && mouseX < 330 && mouseY > 170 && mouseY < 230) {
             r = 228;
@@ -82,7 +81,6 @@ int opcoes() {
         al_flip_display();
     }
 
-    al_destroy_display(display);
     al_destroy_bitmap(moldura);
     al_destroy_font(font_tittle);
     al_destroy_font(font_options);

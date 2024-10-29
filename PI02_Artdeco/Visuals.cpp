@@ -9,7 +9,7 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-int personalizacao() {
+int personalizacao(ALLEGRO_DISPLAY* display) {
 
     al_init();
     al_init_font_addon();
@@ -18,7 +18,6 @@ int personalizacao() {
     al_init_primitives_addon();
     al_install_mouse();
 
-    ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
     al_set_window_position(display, 0, 35);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
@@ -83,7 +82,6 @@ int personalizacao() {
         al_flip_display();
     }
 
-    al_destroy_display(display);
     al_destroy_bitmap(moldura);
     al_destroy_font(font_tittle);
     al_destroy_font(font_options);

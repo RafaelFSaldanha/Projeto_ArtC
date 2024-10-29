@@ -4,5 +4,5 @@
 #include <allegro5/allegro.h>
 
 int gameLogic();
-int gameView();
+int gameView(ALLEGRO_DISPLAY* display);
 #endif

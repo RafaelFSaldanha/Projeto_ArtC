@@ -3,6 +3,6 @@
 
 #include <allegro5/allegro.h>
 
-int personalizacao();
+int personalizacao(ALLEGRO_DISPLAY* display);
 #endif
 

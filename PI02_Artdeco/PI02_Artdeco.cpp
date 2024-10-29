@@ -18,51 +18,51 @@ const int HEIGHT = 985;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, FASES, GAME, OPTIONS, OBRA, VANGUARDAS, VISUALS };
 int telaAtual = 1;
-
+ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
 
 int main() {
     while (telaAtual != 0) {
         if (telaAtual == -1) {
-            telaInicial();
-            fases();
-            gameLogic();
-            gameView();
-            opcoes();
-            detalheObra();
-            vanguardas();
-            personalizacao();
+            telaInicial(display);
+            fases(display);
+            gameLogic(display);
+            gameView(display);
+            opcoes(display);
+            detalheObra(display);
+            vanguardas(display);
+            personalizacao(display);
         }
 
         if (telaAtual == 1) {
-            telaAtual = telaInicial();
+            telaAtual = telaInicial(display);
         }
 
         if (telaAtual == 2) {
-            telaAtual = fases();
+            telaAtual = fases(display);
         }
 
         if (telaAtual == 3) {
-            telaAtual = gameView();
+            telaAtual = gameView(display);
             //gameLogic();
         }
 
         if (telaAtual == 4) {
-            telaAtual = opcoes();
+            telaAtual = opcoes(display);
         }
 
         if (telaAtual == 5) {
-            telaAtual = detalheObra();
+            telaAtual = detalheObra(display);
         }
 
         if (telaAtual == 6) {
-            telaAtual = vanguardas();
+            telaAtual = vanguardas(display);
         }
 
         if (telaAtual == 7) {
-            telaAtual = personalizacao();
+            telaAtual = personalizacao(display);
         }
     }
 
-    
+    al_destroy_display(display);
     return 0;
 }

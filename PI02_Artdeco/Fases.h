@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int fases();
+int fases(ALLEGRO_DISPLAY* display);
 #endif

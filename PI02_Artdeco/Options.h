@@ -3,6 +3,6 @@
 
 #include <allegro5/allegro.h>
 
-int opcoes();
+int opcoes(ALLEGRO_DISPLAY* display);
 #endif
 

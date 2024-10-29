@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int detalheObra();
+int detalheObra(ALLEGRO_DISPLAY* display);
 #endif

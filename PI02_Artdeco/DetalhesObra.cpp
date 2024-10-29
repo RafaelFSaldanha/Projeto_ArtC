@@ -9,7 +9,7 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-int detalheObra() {
+int detalheObra(ALLEGRO_DISPLAY* display) {
 
     al_init();
     al_init_font_addon();
@@ -18,11 +18,10 @@ int detalheObra() {
     al_init_primitives_addon();
     al_install_mouse();
 
-    ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
     al_set_window_position(display, 0, 35);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
-    ALLEGRO_FONT* font_text = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 30, 0);
+    ALLEGRO_FONT* font_text = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 30, ALLEGRO_TTF_NO_KERNING);
     ALLEGRO_TIMER* timer = al_create_timer(1.0 / 60.0);
     ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -72,7 +71,6 @@ int detalheObra() {
         al_flip_display();
     }
 
-    al_destroy_display(display);
     al_destroy_bitmap(moldura);
     al_destroy_font(font_text);
     al_destroy_event_queue(event_queue);

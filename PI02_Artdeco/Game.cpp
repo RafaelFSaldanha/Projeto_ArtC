@@ -129,14 +129,13 @@ int gridLogic(int startX, int startY, int width, int height, ALLEGRO_BITMAP* box
     return 0;
 }
 
-int gameLogic() {
+int gameLogic(ALLEGRO_DISPLAY* display) {
 
     al_init();
     al_init_font_addon();
     al_init_image_addon();
     al_install_mouse();
 
-    ALLEGRO_DISPLAY* display = al_create_display(1150, 650);
     ALLEGRO_TIMER* timer = al_create_timer(1.0 / 60.0);
     ALLEGRO_MOUSE_STATE state;
     ALLEGRO_EVENT event;
@@ -302,7 +301,6 @@ int gameView() {
             al_flip_display();
         }
 
-        al_destroy_display(display);
         al_destroy_bitmap(moldura);
         al_destroy_font(font_tittle);
         al_destroy_font(font_text);
