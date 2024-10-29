@@ -13,8 +13,8 @@
 #include "Vanguardas.h"
 #include "Visuals.h"
 
-const int WIDTH = 1910;
-const int HEIGHT = 990;
+const int WIDTH = 1920;
+const int HEIGHT = 985;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, FASES, GAME, OPTIONS, OBRA, VANGUARDAS, VISUALS };
 int telaAtual = 1;

@@ -6,8 +6,8 @@
 #include <stdio.h>
 #include "Visuals.h"
 
-const int WIDTH = 1910;
-const int HEIGHT = 990;
+const int WIDTH = 1920;
+const int HEIGHT = 985;
 
 int personalizacao() {
 
@@ -19,7 +19,7 @@ int personalizacao() {
     al_install_mouse();
 
     ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
-    al_set_window_position(display, 10, 30);
+    al_set_window_position(display, 0, 35);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
     ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70, 0);
@@ -33,7 +33,7 @@ int personalizacao() {
     ALLEGRO_MOUSE_CURSOR* cursor = al_create_mouse_cursor(pincel_cursor, 0, 0);
     al_set_mouse_cursor(display, cursor);
     al_show_mouse_cursor(display);
-    ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/Moldura.png");
+    ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
 
     while (true) {
 
@@ -52,9 +52,9 @@ int personalizacao() {
         int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -70, 2150, 1160, 0);
-        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Personalizacao");
-        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Personalizacao");
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -73, 2160, 1165, 0);
+        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Personalização");
+        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Personalização");
 
         if (mouseX > WIDTH / 2 - 140 && mouseX < WIDTH / 2 + 140 && mouseY > 400 && mouseY < 440) {
             r = 225;
