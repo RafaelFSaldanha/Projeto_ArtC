@@ -301,6 +301,7 @@ int gameView() {
             al_flip_display();
         }
 
+        al_destroy_display(display);
         al_destroy_bitmap(moldura);
         al_destroy_font(font_tittle);
         al_destroy_font(font_text);

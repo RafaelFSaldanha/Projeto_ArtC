@@ -3,64 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Visuals.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Visuals.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Vanguardas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\TelaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Options.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Options.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Fases.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Fases.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\DetalhesObra.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\PI02_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Visuals.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Visuals.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Vanguardas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\TelaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\DetalhesObra.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Fases.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Fases.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\PI02_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,201 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Visuals.h",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Visuals.h",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Visuals.h",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Visuals.h",
-              "RelativeToolTip": "PI02_Artdeco\\Visuals.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:39.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Vanguardas.h",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.h",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Vanguardas.h",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.h",
-              "RelativeToolTip": "PI02_Artdeco\\Vanguardas.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:35.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Options.h",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Options.h",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Options.h",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Options.h",
-              "RelativeToolTip": "PI02_Artdeco\\Options.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:29.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TelaPrincipal.h",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.h",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\TelaPrincipal.h",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.h",
-              "RelativeToolTip": "PI02_Artdeco\\TelaPrincipal.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:29.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.h",
               "RelativeDocumentMoniker": "PI02_Artdeco\\Game.h",
               "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.h",
               "RelativeToolTip": "PI02_Artdeco\\Game.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:24.657Z",
+              "WhenOpened": "2024-10-31T14:15:44.758Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DetalhesObra.h",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.h",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\DetalhesObra.h",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.h",
-              "RelativeToolTip": "PI02_Artdeco\\DetalhesObra.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:13.157Z",
+              "DocumentIndex": 0,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Game.cpp",
+              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.cpp*",
+              "RelativeToolTip": "PI02_Artdeco\\Game.cpp*",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAWwMwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-31T14:19:49.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Fases.h",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Fases.h",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Fases.h",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Fases.h",
-              "RelativeToolTip": "PI02_Artdeco\\Fases.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-29T23:25:12.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "PI02_Artdeco.cpp",
               "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp",
               "RelativeDocumentMoniker": "PI02_Artdeco\\PI02_Artdeco.cpp",
               "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp",
               "RelativeToolTip": "PI02_Artdeco\\PI02_Artdeco.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAD8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAADwvxsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:21:06.661Z",
+              "WhenOpened": "2024-10-31T14:12:26.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Visuals.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Visuals.cpp",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Visuals.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Visuals.cpp",
-              "RelativeToolTip": "PI02_Artdeco\\Visuals.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:22:08.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.cpp",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Game.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Game.cpp",
-              "RelativeToolTip": "PI02_Artdeco\\Game.cpp",
-              "ViewState": "AgIAACYBAAAAAAAAAAAAAC4BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:20:37.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DetalhesObra.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.cpp",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\DetalhesObra.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.cpp",
-              "RelativeToolTip": "PI02_Artdeco\\DetalhesObra.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:20:20.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Fases.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Fases.cpp",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Fases.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Fases.cpp",
-              "RelativeToolTip": "PI02_Artdeco\\Fases.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:09:04.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Vanguardas.cpp",
               "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.cpp",
               "RelativeDocumentMoniker": "PI02_Artdeco\\Vanguardas.cpp",
               "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.cpp",
               "RelativeToolTip": "PI02_Artdeco\\Vanguardas.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:07:40.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TelaPrincipal.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.cpp",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\TelaPrincipal.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.cpp",
-              "RelativeToolTip": "PI02_Artdeco\\TelaPrincipal.cpp",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T23:05:04.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Options.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Options.cpp",
-              "RelativeDocumentMoniker": "PI02_Artdeco\\Options.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\Options.cpp",
-              "RelativeToolTip": "PI02_Artdeco\\Options.cpp",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-29T22:20:44.084Z",
+              "WhenOpened": "2024-10-31T14:07:36.722Z",
               "EditorCaption": ""
             }
           ]

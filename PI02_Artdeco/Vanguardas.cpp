@@ -9,28 +9,6 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-void draw_inverted_rectangle(ALLEGRO_BITMAP* background, int x, int y, int width, int height, float opacity) {
-    ALLEGRO_BITMAP* temp_bitmap = al_create_bitmap(width, height);
-    al_set_target_bitmap(temp_bitmap);
-    al_draw_bitmap_region(background, x, y, width, height, 0, 0, 0);
-
-    al_lock_bitmap(temp_bitmap, ALLEGRO_PIXEL_FORMAT_ANY, ALLEGRO_LOCK_READWRITE);
-    for (int i = 0; i < width; i++) {
-        for (int j = 0; j < height; j++) {
-            ALLEGRO_COLOR original_color = al_get_pixel(temp_bitmap, i, j);
-            float r, g, b, a;
-            al_unmap_rgba_f(original_color, &r, &g, &b, &a);
-            ALLEGRO_COLOR inverted_color = al_map_rgba_f(1 - r, 1 - g, 1 - b, opacity);
-            al_put_pixel(i, j, inverted_color);
-        }
-    }
-    al_unlock_bitmap(temp_bitmap);
-
-    al_set_target_backbuffer(al_get_current_display());
-    al_draw_bitmap(temp_bitmap, x, y, 0);
-    al_destroy_bitmap(temp_bitmap);
-}
-
 int vanguardas(ALLEGRO_DISPLAY* display) {
     al_init();
     al_init_font_addon();
@@ -68,6 +46,9 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
         int mouseX = state.x;
         int mouseY = state.y;
         int mouseB = state.buttons;
+        int r = 0;
+        int g = 0;
+        int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
         al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230, 125, 1500, 735, 0);
@@ -75,66 +56,106 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Vanguardas");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Vanguardas");
 
-        float opacity = 0.5;
-        int r = 0, g = 0, b = 0;
-
-        // Renascentismo
         if (mouseX > WIDTH / 4 - 200 && mouseX < WIDTH / 4 + 200 && mouseY > 300 && mouseY < 525) {
-            r = 225; g = 190; b = 0;
-            if (mouseB == 1) { novaTela = 2; break; }
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
         }
         else { r = 0; g = 0; b = 0; }
-        draw_inverted_rectangle(noite_estrelada, WIDTH / 4 - 200, 300, 400, 225, opacity);
+
+        al_draw_filled_rectangle(WIDTH / 4 - 200, 300, WIDTH / 4 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 4, 400, ALLEGRO_ALIGN_CENTER, "Renascentismo");
 
-        // Cubismo
         if (mouseX > WIDTH / 4 - 200 && mouseX < WIDTH / 4 + 200 && mouseY > 575 && mouseY < 800) {
-            r = 225; g = 190; b = 0;
-            if (mouseB == 1) { novaTela = 2; break; }
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
         }
         else { r = 0; g = 0; b = 0; }
-        draw_inverted_rectangle(noite_estrelada, WIDTH / 4 - 200, 575, 400, 225, opacity);
+
+        al_draw_filled_rectangle(WIDTH / 4 - 200, 575, WIDTH / 4 + 200, 800, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 4, 675, ALLEGRO_ALIGN_CENTER, "Cubismo");
 
-        // Impressionismo
         if (mouseX > WIDTH / 2 - 200 && mouseX < WIDTH / 2 + 200 && mouseY > 300 && mouseY < 525) {
-            r = 225; g = 190; b = 0;
-            if (mouseB == 1) { novaTela = 2; break; }
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
         }
         else { r = 0; g = 0; b = 0; }
-        draw_inverted_rectangle(noite_estrelada, WIDTH / 2 - 200, 300, 400, 225, opacity);
+
+        al_draw_filled_rectangle(WIDTH / 2 - 200, 300, WIDTH / 2 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, "Impressionismo");
 
-        // Futurismo
         if (mouseX > WIDTH / 2 - 200 && mouseX < WIDTH / 2 + 200 && mouseY > 575 && mouseY < 800) {
-            r = 225; g = 190; b = 0;
-            if (mouseB == 1) { novaTela = 2; break; }
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
         }
         else { r = 0; g = 0; b = 0; }
-        draw_inverted_rectangle(noite_estrelada, WIDTH / 2 - 200, 575, 400, 225, opacity);
+
+        al_draw_filled_rectangle(WIDTH / 2 - 200, 575, WIDTH / 2 + 200, 800, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 675, ALLEGRO_ALIGN_CENTER, "Futurismo");
 
-        // Surrealismo
         if (mouseX > WIDTH / 2 + WIDTH / 4 - 200 && mouseX < WIDTH / 2 + WIDTH / 4 + 200 && mouseY > 300 && mouseY < 525) {
-            r = 225; g = 190; b = 0;
-            if (mouseB == 1) { novaTela = 2; break; }
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
         }
         else { r = 0; g = 0; b = 0; }
-        draw_inverted_rectangle(noite_estrelada, WIDTH / 2 + WIDTH / 4 - 200, 300, 400, 225, opacity);
+
+        al_draw_filled_rectangle(WIDTH / 2 + WIDTH / 4 - 200, 300, WIDTH / 2 + WIDTH / 4 + 200, 525, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2 + WIDTH / 4, 400, ALLEGRO_ALIGN_CENTER, "Surrealismo");
 
-        // Expressionismo
         if (mouseX > WIDTH / 2 + WIDTH / 4 - 200 && mouseX < WIDTH / 2 + WIDTH / 4 + 200 && mouseY > 575 && mouseY < 800) {
-            r = 225; g = 190; b = 0;
-            if (mouseB == 1) { novaTela = 2; break; }
+            r = 225;
+            g = 190;
+            b = 0;
+            if (mouseB == 1) {
+                r = 0; g = 0; b = 0;
+                novaTela = 2;
+                break;
+
+            }
         }
         else { r = 0; g = 0; b = 0; }
-        draw_inverted_rectangle(noite_estrelada, WIDTH / 2 + WIDTH / 4 - 200, 575, 400, 225, opacity);
+
+        al_draw_filled_rectangle(WIDTH / 2 + WIDTH / 4 - 200, 575, WIDTH / 2 + WIDTH / 4 + 200, 800, al_map_rgb(255, 255, 255));
         al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2 + WIDTH / 4, 675, ALLEGRO_ALIGN_CENTER, "Expressionismo");
 
         al_flip_display();
     }
 
+    al_destroy_display(display);
     al_destroy_bitmap(moldura);
     al_destroy_font(font_tittle);
     al_destroy_font(font_options);

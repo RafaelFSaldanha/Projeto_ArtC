@@ -25,7 +25,7 @@ int main() {
         if (telaAtual == -1) {
             telaInicial(display);
             fases(display);
-            gameLogic(display);
+            gameLogic();
             gameView(display);
             opcoes(display);
             detalheObra(display);

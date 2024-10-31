@@ -1,15 +1,8 @@
-﻿  DetalhesObra.cpp
-  Fases.cpp
-  Game.cpp
-  Options.cpp
-  PI02_Artdeco.cpp
-  TelaPrincipal.cpp
-C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\PI02_Artdeco.cpp(28,13): error C2660: 'gameLogic': função não recebe 1 argumentos
-      C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\Game.h(6,5):
-      consulte a declaração de 'gameLogic'
-      C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\PI02_Artdeco.cpp(28,13):
-      ao tentar corresponder a lista de argumentos '(ALLEGRO_DISPLAY *)'
-  
-  Vanguardas.cpp
-  Visuals.cpp
-  Gerando Código...
+﻿  Game.cpp
+PI02_Artdeco.obj : error LNK2019: símbolo externo não resolvido, "int __cdecl gameLogic(void)" (?gameLogic@@YAHXZ), referenciado na função main
+    Dica em símbolos que estão definidos e podem corresponder potencialmente a:
+      "int __cdecl gameLogic(struct ALLEGRO_DISPLAY *)" (?gameLogic@@YAHPEAUALLEGRO_DISPLAY@@@Z)
+PI02_Artdeco.obj : error LNK2019: símbolo externo não resolvido, "int __cdecl gameView(struct ALLEGRO_DISPLAY *)" (?gameView@@YAHPEAUALLEGRO_DISPLAY@@@Z), referenciado na função main
+    Dica em símbolos que estão definidos e podem corresponder potencialmente a:
+      "int __cdecl gameView(void)" (?gameView@@YAHXZ)
+C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\x64\Debug\PI02_Artdeco.exe : fatal error LNK1120: 2 externo não resolvidos
