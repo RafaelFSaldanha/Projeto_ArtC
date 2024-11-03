@@ -18,11 +18,13 @@ const int WIDTH = 1920;
 const int HEIGHT = 985;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, FASES, GAME, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL };
-int telaAtual = 1;
+int telaAtual = 3;
 
 int main() {
     al_init();
+    al_set_new_display_flags(ALLEGRO_RESIZABLE);
     ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
+    al_acknowledge_resize(display);
 
     while (telaAtual != 0) {
         if (telaAtual == -1) {
@@ -46,7 +48,7 @@ int main() {
 
         if (telaAtual == 3) {
             telaAtual = gameView(display);
-            //gameLogic();
+            //telaAtual = gameLogic(display);
         }
 
         if (telaAtual == 4) {

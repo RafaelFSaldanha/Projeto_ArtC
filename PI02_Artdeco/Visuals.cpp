@@ -11,18 +11,19 @@ const int HEIGHT = 985;
 
 int personalizacao(ALLEGRO_DISPLAY* display) {
 
+    int now_w = al_get_display_width(display);
+    int now_h = al_get_display_height(display);
+
     al_init();
     al_init_font_addon();
     al_init_ttf_addon();
     al_init_image_addon();
     al_init_primitives_addon();
     al_install_mouse();
-
+    
     al_set_window_position(display, 0, 35);
     al_set_window_title(display, "ArtDeco");
     ALLEGRO_MOUSE_STATE state;
-    ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70, 0);
-    ALLEGRO_FONT* font_options = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 50, 0);
     ALLEGRO_TIMER* timer = al_create_timer(1.0 / 60.0);
     ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -42,6 +43,18 @@ int personalizacao(ALLEGRO_DISPLAY* display) {
             break;
         }
 
+        if (event.type == ALLEGRO_EVENT_DISPLAY_RESIZE) {
+            al_acknowledge_resize(display);
+            now_w = al_get_display_width(display);
+            now_h = al_get_display_height(display);
+        }
+
+        float scale_x = (float)now_w / WIDTH;
+        float scale_y = (float)now_h / HEIGHT;
+
+        ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70 * scale_y, 0);
+        ALLEGRO_FONT* font_options = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 50 * scale_y, 0);
+
         al_get_mouse_state(&state);
         int mouseX = state.x;
         int mouseY = state.y;
@@ -51,11 +64,11 @@ int personalizacao(ALLEGRO_DISPLAY* display) {
         int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130, -73, 2160, 1165, 0);
-        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), WIDTH / 2 - 5, 205, ALLEGRO_ALIGN_CENTER, "Personalização");
-        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), WIDTH / 2, 200, ALLEGRO_ALIGN_CENTER, "Personalização");
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
+        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5 * scale_x, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "Personalizaï¿½ï¿½o");
+        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "Personalizaï¿½ï¿½o");
 
-        if (mouseX > WIDTH / 2 - 140 && mouseX < WIDTH / 2 + 140 && mouseY > 400 && mouseY < 440) {
+        if (mouseX > now_w / 2 - 140 * scale_x && mouseX < now_w / 2 + 140 * scale_x && mouseY > 400 * scale_y && mouseY < 440 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -65,26 +78,26 @@ int personalizacao(ALLEGRO_DISPLAY* display) {
         }
         else { b = 0; }
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 400, ALLEGRO_ALIGN_CENTER, "Tela inicial");
+        al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 400 * scale_y, ALLEGRO_ALIGN_CENTER, "Tela inicial");
 
-        if (mouseX > WIDTH / 2 - 150 && mouseX < WIDTH / 2 + 150 && mouseY > 500 && mouseY < 540) { r = 225; g = 190; b = 0; }
+        if (mouseX > now_w / 2 - 150 * scale_x && mouseX < now_w / 2 + 150 * scale_x && mouseY > 500 * scale_y && mouseY < 540 * scale_y) { r = 225; g = 190; b = 0; }
         else { r = 0; g = 0; b = 0; }
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 500, ALLEGRO_ALIGN_CENTER, "Background");
+        al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 500 * scale_y, ALLEGRO_ALIGN_CENTER, "Background");
 
-        if (mouseX > WIDTH / 2 - 220 && mouseX < WIDTH / 2 + 220 && mouseY > 600 && mouseY < 640) { r = 225; g = 190; b = 0; }
+        if (mouseX > now_w / 2 - 220 * scale_x && mouseX < now_w / 2 + 220 * scale_x && mouseY > 600 * scale_y && mouseY < 640 * scale_y) { r = 225; g = 190; b = 0; }
         else { r = 0; g = 0; b = 0; }
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 600, ALLEGRO_ALIGN_CENTER, "Layout das fases");
+        al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 600 * scale_y, ALLEGRO_ALIGN_CENTER, "Layout das fases");
 
-        if (mouseX > WIDTH / 2 - 80 && mouseX < WIDTH / 2 + 80 && mouseY > 700 && mouseY < 740) { r = 225; g = 190; b = 0; }
+        if (mouseX > now_w / 2 - 80 * scale_x && mouseX < now_w / 2 + 80 * scale_x && mouseY > 700 * scale_y && mouseY < 740 * scale_y) { r = 225; g = 190; b = 0; }
         else { r = 0; g = 0; b = 0; }
-        al_draw_text(font_options, al_map_rgb(r, g, b), WIDTH / 2, 700, ALLEGRO_ALIGN_CENTER, "Extras");
+        al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 700 * scale_y, ALLEGRO_ALIGN_CENTER, "Extras");
 
         al_flip_display();
+        al_destroy_font(font_tittle);
+        al_destroy_font(font_options);
     }
 
     al_destroy_bitmap(moldura);
-    al_destroy_font(font_tittle);
-    al_destroy_font(font_options);
     al_destroy_event_queue(event_queue);
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
