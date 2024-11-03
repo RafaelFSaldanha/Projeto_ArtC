@@ -3,6 +3,6 @@
 
 #include <allegro5/allegro.h>
 
-int gameLogic();
+int gameLogic(ALLEGRO_DISPLAY* display);
 int gameView(ALLEGRO_DISPLAY* display);
 #endif

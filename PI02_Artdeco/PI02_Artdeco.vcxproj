@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="carrossel.cpp" />
     <ClCompile Include="Fases.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="DetalhesObra.cpp" />
@@ -153,6 +154,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Carrossel.h" />
     <ClInclude Include="DetalhesObra.h" />
     <ClInclude Include="Fases.h" />
     <ClInclude Include="Game.h" />

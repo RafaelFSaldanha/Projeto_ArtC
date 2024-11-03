@@ -12,20 +12,23 @@
 #include "DetalhesObra.h"
 #include "Vanguardas.h"
 #include "Visuals.h"
+#include "Carrossel.h"
 
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-enum TelaAtiva {DEBUG, PRINCIPAL, FASES, GAME, OPTIONS, OBRA, VANGUARDAS, VISUALS };
+enum TelaAtiva {DEBUG, PRINCIPAL, FASES, GAME, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL };
 int telaAtual = 1;
-ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
 
 int main() {
+    al_init();
+    ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
+
     while (telaAtual != 0) {
         if (telaAtual == -1) {
             telaInicial(display);
             fases(display);
-            gameLogic();
+            gameLogic(display);
             gameView(display);
             opcoes(display);
             detalheObra(display);
@@ -60,6 +63,10 @@ int main() {
 
         if (telaAtual == 7) {
             telaAtual = personalizacao(display);
+        }
+
+        if (telaAtual == 8) {
+            telaAtual = carrossel(display);
         }
     }
 

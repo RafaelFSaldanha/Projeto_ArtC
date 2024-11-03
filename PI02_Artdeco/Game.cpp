@@ -189,14 +189,13 @@ int gameLogic(ALLEGRO_DISPLAY* display) {
     }
 
     al_destroy_font(font);
-    al_destroy_display(display);
     al_destroy_event_queue(event_queue);
     al_destroy_timer(timer);
 
     return 0;
 }
 
-int gameView() {
+int gameView(ALLEGRO_DISPLAY* display) {
 
 
         al_init();
@@ -206,7 +205,6 @@ int gameView() {
         al_init_primitives_addon();
         al_install_mouse();
 
-        ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
         al_set_window_position(display, 0, 35);
         al_set_window_title(display, "ArtDeco");
         ALLEGRO_MOUSE_STATE state;
@@ -301,7 +299,6 @@ int gameView() {
             al_flip_display();
         }
 
-        al_destroy_display(display);
         al_destroy_bitmap(moldura);
         al_destroy_font(font_tittle);
         al_destroy_font(font_text);

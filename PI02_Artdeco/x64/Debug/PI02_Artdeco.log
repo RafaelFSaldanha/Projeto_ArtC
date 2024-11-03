@@ -1,8 +1,2 @@
-﻿  Game.cpp
-PI02_Artdeco.obj : error LNK2019: símbolo externo não resolvido, "int __cdecl gameLogic(void)" (?gameLogic@@YAHXZ), referenciado na função main
-    Dica em símbolos que estão definidos e podem corresponder potencialmente a:
-      "int __cdecl gameLogic(struct ALLEGRO_DISPLAY *)" (?gameLogic@@YAHPEAUALLEGRO_DISPLAY@@@Z)
-PI02_Artdeco.obj : error LNK2019: símbolo externo não resolvido, "int __cdecl gameView(struct ALLEGRO_DISPLAY *)" (?gameView@@YAHPEAUALLEGRO_DISPLAY@@@Z), referenciado na função main
-    Dica em símbolos que estão definidos e podem corresponder potencialmente a:
-      "int __cdecl gameView(void)" (?gameView@@YAHXZ)
-C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\x64\Debug\PI02_Artdeco.exe : fatal error LNK1120: 2 externo não resolvidos
+﻿  Vanguardas.cpp
+  PI02_Artdeco.vcxproj -> C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\x64\Debug\PI02_Artdeco.exe
