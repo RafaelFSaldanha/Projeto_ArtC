@@ -141,11 +141,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="carrossel.cpp" />
-    <ClCompile Include="Fases.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Cubismo.cpp" />
+    <ClCompile Include="DetalheImF1.cpp" />
+    <ClCompile Include="DetalheReF1.cpp" />
+    <ClCompile Include="Expressionismo.cpp" />
+    <ClCompile Include="Impressionismo.cpp" />
+    <ClCompile Include="Renascentismo.cpp" />
+    <ClCompile Include="ReFase1.cpp" />
     <ClCompile Include="DetalhesObra.cpp" />
     <ClCompile Include="Options.cpp" />
     <ClCompile Include="PI02_Artdeco.cpp" />
+    <ClCompile Include="Surrealismo.cpp" />
     <ClCompile Include="TelaPrincipal.cpp" />
     <ClCompile Include="Vanguardas.cpp" />
     <ClCompile Include="Visuals.cpp" />
@@ -155,10 +161,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carrossel.h" />
+    <ClInclude Include="Cubismo.h" />
+    <ClInclude Include="DetalheImF1.h" />
+    <ClInclude Include="detalheReF1.h" />
     <ClInclude Include="DetalhesObra.h" />
-    <ClInclude Include="Fases.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Expressionismo.h" />
+    <ClInclude Include="Impressionismo.h" />
+    <ClInclude Include="Renascentismo.h" />
+    <ClInclude Include="ReFase1.h" />
     <ClInclude Include="Options.h" />
+    <ClInclude Include="Surrealismo.h" />
     <ClInclude Include="TelaPrincipal.h" />
     <ClInclude Include="Vanguardas.h" />
     <ClInclude Include="Visuals.h" />

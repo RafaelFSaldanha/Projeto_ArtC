@@ -65,8 +65,8 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
         int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230 * scale_x, 125 * scale_y, 1500 * scale_x, 735 * scale_y, 0);
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
+        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 190 * scale_x, 125 * scale_y, 1540 * scale_x, 735 * scale_y, 0);
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -180 * scale_x, -73 * scale_y, 2220 * scale_x, 1165 * scale_y, 0);
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5 * scale_x, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "Vanguardas");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "Vanguardas");
 
@@ -83,7 +83,8 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
         }
         else { r = 0; g = 0; b = 0; }
 
-        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 300 * scale_y, now_w / 4 + 200 * scale_x, 525 * scale_y, al_map_rgb(255, 255, 255));
+        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 300 * scale_y, now_w / 4 + 200 * scale_x, 525 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 302 * scale_y, now_w / 4 + 198 * scale_x, 523 * scale_y, al_map_rgb(50, 116, 177));
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 4, 400 * scale_y, ALLEGRO_ALIGN_CENTER, "Renascentismo");
 
         if (mouseX > now_w / 4 - 200 * scale_x && mouseX < now_w / 4 + 200 * scale_x && mouseY > 575 * scale_y && mouseY < 800 * scale_y) {
@@ -92,14 +93,15 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 2;
+                novaTela = 12;
                 break;
 
             }
         }
         else { r = 0; g = 0; b = 0; }
 
-        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 575 * scale_y, now_w / 4 + 200 * scale_x, 800 * scale_y, al_map_rgb(255, 255, 255));
+        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 575 * scale_y, now_w / 4 + 200 * scale_x, 800 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 577 * scale_y, now_w / 4 + 198 * scale_x, 798 * scale_y, al_map_rgb(44, 95, 146));
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 4, 675 * scale_y, ALLEGRO_ALIGN_CENTER, "Cubismo");
 
         if (mouseX > now_w / 2 - 200 * scale_x && mouseX < now_w / 2 + 200 * scale_x && mouseY > 300 * scale_y && mouseY < 525 * scale_y) {
@@ -108,14 +110,15 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 2;
+                novaTela = 9;
                 break;
 
             }
         }
         else { r = 0; g = 0; b = 0; }
 
-        al_draw_filled_rectangle(now_w / 2 - 200 * scale_x, 300 * scale_y, now_w / 2 + 200 * scale_x, 525 * scale_y, al_map_rgb(255, 255, 255));
+        al_draw_filled_rectangle(now_w / 2 - 200 * scale_x, 300 * scale_y, now_w / 2 + 200 * scale_x, 525 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 198 * scale_x, 302 * scale_y, now_w / 2 + 198 * scale_x, 523 * scale_y, al_map_rgb(65, 108, 147));
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 400 * scale_y, ALLEGRO_ALIGN_CENTER, "Impressionismo");
 
         if (mouseX > now_w / 2 - 200 * scale_x && mouseX < now_w / 2 + 200 * scale_x && mouseY > 575 * scale_y && mouseY < 800 * scale_y) {
@@ -131,7 +134,8 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
         }
         else { r = 0; g = 0; b = 0; }
 
-        al_draw_filled_rectangle(now_w / 2 - 200 * scale_x, 575 * scale_y, now_w / 2 + 200 * scale_x, 800 * scale_y, al_map_rgb(255, 255, 255));
+        al_draw_filled_rectangle(now_w / 2 - 200 * scale_x, 575 * scale_y, now_w / 2 + 200 * scale_x, 800 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 198 * scale_x, 577 * scale_y, now_w / 2 + 198 * scale_x, 798 * scale_y, al_map_rgb(38, 63, 106));
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 675 * scale_y, ALLEGRO_ALIGN_CENTER, "Futurismo");
 
         if (mouseX > now_w / 2 + now_w / 4 - 200 * scale_x && mouseX < now_w / 2 + now_w / 4 + 200 * scale_x && mouseY > 300 * scale_y && mouseY < 525 * scale_y) {
@@ -140,14 +144,15 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 2;
+                novaTela = 10;
                 break;
 
             }
         }
         else { r = 0; g = 0; b = 0; }
 
-        al_draw_filled_rectangle(now_w / 2 + now_w / 4 - 200 * scale_x, 300 * scale_y, now_w / 2 + now_w / 4 + 200 * scale_x, 525 * scale_y, al_map_rgb(255, 255, 255));
+        al_draw_filled_rectangle(now_w / 2 + now_w / 4 - 200 * scale_x, 300 * scale_y, now_w / 2 + now_w / 4 + 200 * scale_x, 525 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 + now_w / 4 - 198 * scale_x, 302 * scale_y, now_w / 2 + now_w / 4 + 198 * scale_x, 523 * scale_y, al_map_rgb(47, 93, 133));
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2 + now_w / 4, 400 * scale_y, ALLEGRO_ALIGN_CENTER, "Surrealismo");
 
         if (mouseX > now_w / 2 + now_w / 4 - 200 * scale_x && mouseX < now_w / 2 + now_w / 4 + 200 * scale_x && mouseY > 575 * scale_y && mouseY < 800 * scale_y) {
@@ -156,14 +161,15 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 2;
+                novaTela = 11;
                 break;
 
             }
         }
         else { r = 0; g = 0; b = 0; }
 
-        al_draw_filled_rectangle(now_w / 2 + now_w / 4 - 200 * scale_x, 575 * scale_y, now_w / 2 + now_w / 4 + 200 * scale_x, 800 * scale_y, al_map_rgb(255, 255, 255));
+        al_draw_filled_rectangle(now_w / 2 + now_w / 4 - 200 * scale_x, 575 * scale_y, now_w / 2 + now_w / 4 + 200 * scale_x, 800 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 + now_w / 4 - 198 * scale_x, 577 * scale_y, now_w / 2 + now_w / 4 + 198 * scale_x, 798 * scale_y, al_map_rgb(47, 85, 151));
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2 + now_w / 4, 675 * scale_y, ALLEGRO_ALIGN_CENTER, "Expressionismo");
 
         al_flip_display();

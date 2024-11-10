@@ -69,15 +69,15 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
         int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230*scale_x, 125*scale_y, 1500*scale_x, 735*scale_y, 0);
+        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 190 * scale_x, 125 * scale_y, 1540 * scale_x, 735 * scale_y, 0);
         al_draw_scaled_rotated_bitmap(monalisa, al_get_bitmap_width(monalisa) / 2, al_get_bitmap_height(monalisa) / 2, 350*scale_x, 700*scale_y, 0.45*scale_x, 0.45*scale_y, 25 * ALLEGRO_PI / 180, 0);
         al_draw_scaled_rotated_bitmap(santa_ceia, al_get_bitmap_width(santa_ceia) / 2, al_get_bitmap_height(santa_ceia) / 2, 1550 * scale_x, 210 * scale_y, 0.6 * scale_x, 0.6 * scale_y, 14 * ALLEGRO_PI / 180, 0);
         al_draw_scaled_rotated_bitmap(bandeirantes, al_get_bitmap_width(bandeirantes) / 2, al_get_bitmap_height(bandeirantes) / 2, 1550 * scale_x, 700 * scale_y, 0.2 * scale_x, 0.2 * scale_y, 353 * ALLEGRO_PI / 180, 0);
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -180 * scale_x, -73 * scale_y, 2220 * scale_x, 1165 * scale_y, 0);
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "ArtDeco");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "ArtDeco");
 
-        if (mouseX > (now_w / 2) - 100 && mouseX < (now_w / 2) + 100 && mouseY > 400 * scale_y && mouseY < 440 * scale_y) {
+        if (mouseX > (now_w / 2) - 80 && mouseX < (now_w / 2) + 80 && mouseY > 400 * scale_y && mouseY < 440 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -85,19 +85,18 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
                 r = 0; g = 0; b = 0;
                 novaTela = 3;
                 break;
-                
             }
         }
         else { b = 0; }
-        char buffer[50]; // Buffer para a string formatada
+        // char buffer[50]; Buffer para a string formatada
 
         // Formatar a string
-        snprintf(buffer, sizeof(buffer), "Jogar: %d", al_get_display_width(display));
+        //snprintf(buffer, sizeof(buffer), "Jogar: %d", al_get_display_width(display));
 
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 400 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
+        al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 400 * scale_y, ALLEGRO_ALIGN_CENTER, "Jogar");
 
-        if (mouseX > now_w / 2 - 100 && mouseX < now_w / 2 + 100 && mouseY > 500 * scale_y && mouseY < 540 * scale_y) {
+        if (mouseX > now_w / 2 - 70 && mouseX < now_w / 2 + 70 && mouseY > 500 * scale_y && mouseY < 540 * scale_y) {
             r = 225;
             g = 190;
             b = 0;

@@ -35,6 +35,7 @@ int opcoes(ALLEGRO_DISPLAY* display) {
     al_show_mouse_cursor(display);
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
+    ALLEGRO_BITMAP* seta = al_load_bitmap("./assets/img/seta.png");
 
     while (true) {
 
@@ -55,6 +56,7 @@ int opcoes(ALLEGRO_DISPLAY* display) {
 
         ALLEGRO_FONT* font_tittle = al_load_ttf_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70 * scale_y, ALLEGRO_TTF_NO_KERNING);
         ALLEGRO_FONT* font_options = al_load_ttf_font("./assets/fonts/MontserratAlternates-Regular.ttf", 50 * scale_y, ALLEGRO_TTF_NO_KERNING);
+        ALLEGRO_FONT* font_options2 = al_load_ttf_font("./assets/fonts/MontserratAlternates-Regular.ttf", 20 * scale_y, ALLEGRO_TTF_NO_KERNING);
         al_get_mouse_state(&state);
         int mouseX = state.x;
         int mouseY = state.y;
@@ -64,15 +66,48 @@ int opcoes(ALLEGRO_DISPLAY* display) {
         int b = 0;
      
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230 * scale_x, 125 * scale_y, 1500 * scale_x, 735 * scale_y, 0);
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
-        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5 * scale_x, 205 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Op��es");
-        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Op��es");
+        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 190 * scale_x, 125 * scale_y, 1540 * scale_x, 735 * scale_y, 0);
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -180 * scale_x, -73 * scale_y, 2220 * scale_x, 1165 * scale_y, 0);
+        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5 * scale_x, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "Opções");
+        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "Opções");
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), 795 * scale_x, 400 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Som:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 830 * scale_x, 500 * scale_y, ALLEGRO_ALIGN_CENTER, u8"M�sica:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 870 * scale_x, 600 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Resolu��o:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 805 * scale_x, 700 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Dicas:");
+        al_draw_filled_rectangle(now_w / 2 - 325 * scale_x, 400 * scale_y, now_w / 2 - 160 * scale_x, 465 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 323 * scale_x, 402 * scale_y, now_w / 2 - 162 * scale_x, 463 * scale_y, al_map_rgb(57, 112, 170));
+        al_draw_text(font_options, al_map_rgb(r, g, b), 650 * scale_x, 400 * scale_y, 0, "Som:");
+
+        al_draw_filled_rectangle(now_w / 2 + 20 * scale_x, 430 * scale_y, now_w / 2 + 300 * scale_x, 435 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_circle(now_w / 2 + 100 * scale_x, 432.5 * scale_y, 15 * scale_y, al_map_rgb(228, 195, 78));
+
+
+        al_draw_filled_rectangle(now_w / 2 - 325 * scale_x, 500 * scale_y, now_w / 2 - 90 * scale_x, 565 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 323 * scale_x, 502 * scale_y, now_w / 2 - 92 * scale_x, 563 * scale_y, al_map_rgb(47, 93, 133));
+        al_draw_text(font_options, al_map_rgb(r, g, b), 650 * scale_x, 500 * scale_y, 0, "Música:");
+
+        al_draw_filled_rectangle(now_w / 2 + 20 * scale_x, 530 * scale_y, now_w / 2 + 300 * scale_x, 535 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_circle(now_w / 2 + 100 * scale_x, 532.5 * scale_y, 15 * scale_y, al_map_rgb(228, 195, 78));
+
+
+        al_draw_filled_rectangle(now_w / 2 - 325 * scale_x, 600 * scale_y, now_w / 2 - 10 * scale_x, 665 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 323 * scale_x, 602 * scale_y, now_w / 2 - 12 * scale_x, 663 * scale_y, al_map_rgb(74, 130, 172));
+        al_draw_text(font_options, al_map_rgb(r, g, b), 650 * scale_x, 600 * scale_y, 0, "Resolução:");
+
+        al_draw_filled_rectangle(now_w / 2 + 20 * scale_x, 600 * scale_y, now_w / 2 + 220 * scale_x, 665 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 + 21 * scale_x, 601 * scale_y, now_w / 2 + 219 * scale_x, 664 * scale_y, al_map_rgb(47, 106, 166));
+        al_draw_scaled_bitmap(seta, 0, 0, al_get_bitmap_width(seta), al_get_bitmap_height(seta), now_w / 2 + 190 * scale_x, 625 * scale_y, 20 * scale_x, 17 * scale_y, 0);
+
+
+        al_draw_filled_rectangle(now_w / 2 - 325 * scale_x, 700 * scale_y, now_w / 2 - 140 * scale_x, 765 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 323 * scale_x, 702 * scale_y, now_w / 2 - 142 * scale_x, 763 * scale_y, al_map_rgb(45, 95, 157));
+        al_draw_text(font_options, al_map_rgb(r, g, b), 650 * scale_x, 700 * scale_y, 0, "Dicas:");
+
+        al_draw_filled_rectangle(now_w / 2 + 20 * scale_x, 700 * scale_y, now_w / 2 + 120 * scale_x, 765 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 + 21 * scale_x, 701 * scale_y, now_w / 2 + 121 * scale_x, 764 * scale_y, al_map_rgb(47, 106, 166));
+        al_draw_text(font_options2, al_map_rgb(r, g, b), 1030 * scale_x, 720 * scale_y, ALLEGRO_ALIGN_CENTER, "Não");
+
+        al_draw_filled_rectangle(now_w / 2 + 120 * scale_x, 700 * scale_y, now_w / 2 + 220 * scale_x, 765 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 + 121 * scale_x, 701 * scale_y, now_w / 2 + 219 * scale_x, 764 * scale_y, al_map_rgb(228, 195, 78));
+        al_draw_text(font_options2, al_map_rgb(r, g, b), 1130 * scale_x, 720 * scale_y, ALLEGRO_ALIGN_CENTER, "Sim");
+
 
         if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
             r = 228;
@@ -93,6 +128,7 @@ int opcoes(ALLEGRO_DISPLAY* display) {
         al_flip_display();
         al_destroy_font(font_tittle);
         al_destroy_font(font_options);
+        al_destroy_font(font_options2);
     }
 
     al_destroy_bitmap(moldura);
