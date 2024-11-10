@@ -4,14 +4,13 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
 #include <string>
+#include <vector>
 #include "ReFase1.h"
+#include "LevelData.h"
 
-int const gameWidth = 10;
-int const gameHeight = 5;
 ALLEGRO_FONT* font;
 const int WIDTH = 1920;
 const int HEIGHT = 985;
-
 
 /*
 0 - Branco
@@ -22,46 +21,42 @@ const int HEIGHT = 985;
 5 - Errado
 */
 
-int coords[gameHeight][gameWidth] = {
-    {0, 1, 0, 0, 1, 0, 1, 1, 1, 0},
-    {0, 1, 0, 0, 1, 0, 0, 1, 0, 0},
-    {0, 1, 1, 1, 1, 0, 0, 1, 0, 0},
-    {0, 1, 0, 0, 1, 0, 0, 1, 0, 0},
-    {0, 1, 0, 0, 1, 0, 1, 1, 1, 0}
-};
-
-int playerCoords[gameHeight][gameWidth];
-int gameBlacks = 0;
-int playerBlacks = 0;
-int playerLifes = 5;
-
-int ReFase1MakeRowHints(int startX, int startY, ALLEGRO_FONT* font, int square) {
+int ReFase1MakeRowHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO_BITMAP* boxes[], int gameWidth, int gameHeight, std::vector<std::vector<int>> coords) {
     std::string hintRow;
-    std::string hintCol;
     int conjuntoRow;
+    int offset;
+
     for (int j = 0; j < gameHeight; j++) {
         conjuntoRow = 0;
         hintRow = "";
+        offset = 0;
 
-        for (int i = 0; i < gameWidth; i++) {
+        for (int i = gameWidth-1; i >= 0; i--) {
             if (coords[j][i] == 1) { conjuntoRow++; }
-            if ((coords[j][i] == 0 or i + 1 == gameWidth) and conjuntoRow > 0) {
-                hintRow += std::to_string(conjuntoRow) + "-";
+            if ((coords[j][i] == 0 or i == 0) and conjuntoRow > 0) {
+                hintRow = std::to_string(conjuntoRow);
                 conjuntoRow = 0;
+
+                int x = startX - offset * square;
+                int y = square + j * square + startY;
+                al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
+                al_draw_text(font, al_map_rgb(0, 0, 0), x, y - 7, 0, hintRow.c_str());
+                offset++;
             }
-            else if (hintRow == "" and i + 1 == gameWidth) {
+            else if (hintRow == "" and i == 0) {
                 hintRow = "0";
+
+                int x = startX - offset * square;
+                int y = square + j * square + startY;
+                al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
+                al_draw_text(font, al_map_rgb(0, 0, 0), x, y - 7, 0, hintRow.c_str());
             }
         }
-        int x = startX;
-        int y = square + j * square + startY;
-        al_draw_text(font, al_map_rgb(0, 0, 0), x, y, 0, hintRow.c_str());
-
     }
     return 0;
 }
 
-int ReFase1MakeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO_BITMAP* boxes[]) {
+int ReFase1MakeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO_BITMAP* boxes[], int gameWidth, int gameHeight, std::vector<std::vector<int>> coords) {
     std::string hintCol;
     int conjuntoCol;
     int offset;
@@ -70,9 +65,9 @@ int ReFase1MakeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, 
         hintCol = "";
         offset = 0;
 
-        for (int i = 0; i < gameHeight; i++) {
+        for (int i = gameHeight-1; i >= 0; i--) {
             if (coords[i][j] == 1) { conjuntoCol++; }
-            if ((coords[i][j] == 0 or i + 1 == gameHeight) and conjuntoCol > 0) {
+            if ((coords[i][j] == 0 or i == 0) and conjuntoCol > 0) {
                 hintCol = std::to_string(conjuntoCol);
                 conjuntoCol = 0;
                 
@@ -82,7 +77,7 @@ int ReFase1MakeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, 
                 al_draw_text(font, al_map_rgb(0, 0, 0), x, y-7, 0, hintCol.c_str());
                 offset++;
             }
-            else if (hintCol == "" and i + 1 == gameHeight) {
+            else if (hintCol == "" and i == 0) {
                 hintCol = "0";
 
                 int x = square + j * square + startX;
@@ -92,21 +87,13 @@ int ReFase1MakeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, 
             }
 
         }
-        
-        for (int i = 0; i <= offset; i++) {
-            
-        }
-
-        int x = square + j * square + startX;
-        int y = startY;
-        
-
-
     }
     return 0;
 }
 
-int gridLogic(int startX, int startY, int square, int width, int height, ALLEGRO_BITMAP* boxes[], ALLEGRO_FONT* font, int mouseX, int mouseY, int mouse) {
+int gridLogic(int startX, int startY, int square, int gameWidth, int gameHeight, ALLEGRO_BITMAP* boxes[], ALLEGRO_FONT* font, int mouseX, int mouseY, int mouse, std::vector<std::vector<int>> coords, std::vector<std::vector<int>>& playerCoords, int *playerBlacks, int *playerLifes) {
+    int width = gameWidth + 1;
+    int height = gameHeight + 1;
 
     for (int i = 0; i < width; i++) {
         for (int j = 0; j < height; j++) {
@@ -123,11 +110,11 @@ int gridLogic(int startX, int startY, int square, int width, int height, ALLEGRO
                         if (mouse == 1) {
                             if (gabarito == 1) {
                                 playerCoords[j - 1][i - 1] = 1;
-                                playerBlacks++;
+                                (*playerBlacks)++;
                             }
                             else { 
                                 playerCoords[j - 1][i - 1] = 5;
-                                playerLifes--;
+                                (*playerLifes)--;
                             }
                         }
                         else if (mouse == 2) {
@@ -144,84 +131,15 @@ int gridLogic(int startX, int startY, int square, int width, int height, ALLEGRO
             }
             else {
                 al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
-                ReFase1MakeRowHints(startX, startY, font, square);
-                ReFase1MakeColHints(startX, startY, font, square, boxes);
+                ReFase1MakeRowHints(startX, startY, font, square, boxes, gameWidth, gameHeight, coords);
+                ReFase1MakeColHints(startX, startY, font, square, boxes, gameWidth, gameHeight, coords);
             }
 
         }
     }
     return 0;
 }
-
-int reFase1GameLogic(ALLEGRO_DISPLAY* display) {
-
-    al_init();
-    al_init_font_addon();
-    al_init_image_addon();
-    al_install_mouse();
-
-    ALLEGRO_TIMER* timer = al_create_timer(1.0 / 60.0);
-    ALLEGRO_MOUSE_STATE state;
-    ALLEGRO_EVENT event;
-    ALLEGRO_EVENT_QUEUE* event_queue = al_create_event_queue();
-
-    ALLEGRO_BITMAP* boxes[6] = {
-        al_load_bitmap("./assets/img/whiteBox.png"),
-        al_load_bitmap("./assets/img/blackBox.png"),
-        al_load_bitmap("./assets/img/grayBox.png"),
-        al_load_bitmap("./assets/img/hoverBox.png"),
-        al_load_bitmap("./assets/img/flagBox.png"),
-        al_load_bitmap("./assets/img/wrongBox.png")
-    };
-
-    al_set_window_position(display, 200, 30);
-    al_set_window_title(display, "Artdeco Main Game");
-
-    font = al_create_builtin_font();
-
-    al_register_event_source(event_queue, al_get_display_event_source(display));
-    al_register_event_source(event_queue, al_get_timer_event_source(timer));
-    al_start_timer(timer);
-
-
-    for (int i = 0; i < gameWidth; i++) {
-        for (int j = 0; j < gameHeight; j++) {
-            playerCoords[j][i] = 0;
-            if (coords[j][i] == 1) { gameBlacks++; }
-        }
-    }
-
-    while (true) {
-
-        al_get_mouse_state(&state);
-        int mouseX = state.x;
-        int mouseY = state.y;
-        int mouseB = state.buttons;
-
-        al_wait_for_event(event_queue, &event);
-        if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
-            break;
-        }
-
-        al_clear_to_color(al_map_rgb(255, 255, 255));
-        if (playerBlacks < gameBlacks) { 
-            gridLogic(25, 25, 35, 11, 6, boxes, font, mouseX, mouseY, mouseB);
-        }
-        else { al_draw_text(font, al_map_rgb(0, 0, 0), 100, 100, 0, "Você venceu, Parabéns!"); }
-
-        al_flip_display();
-
-
-    }
-
-    al_destroy_font(font);
-    al_destroy_event_queue(event_queue);
-    al_destroy_timer(timer);
-
-    return 0;
-}
-
-int reFase1(ALLEGRO_DISPLAY* display) {
+int reFase1(ALLEGRO_DISPLAY* display, int *pFasesDesb) {
 
     int now_w = al_get_display_width(display);
     int now_h = al_get_display_height(display);
@@ -242,16 +160,26 @@ int reFase1(ALLEGRO_DISPLAY* display) {
     al_load_bitmap("./assets/img/wrongBox.png")
     };
 
-    gameBlacks = 0;
+
+    int level = 0;
+
+
+    std::vector<std::vector<int>> coords = criarMatriz(level);
+    int gameWidth = static_cast<int>(coords[0].size());
+    int gameHeight = static_cast<int>(coords.size());
+
+    std::vector<std::vector<int>> playerCoords(gameHeight, std::vector<int>(gameWidth));
+
+    int gameBlacks = 0;
+    int playerBlacks = 0;
+    int playerLifes = 1000;
+    
     for (int i = 0; i < gameWidth; i++) {
         for (int j = 0; j < gameHeight; j++) {
             playerCoords[j][i] = 0;
             if (coords[j][i] == 1) { gameBlacks++; }
         }
     }
-
-    playerBlacks = 0;
-    playerLifes = 5;
 
     al_set_window_position(display, 0, 35);
     al_set_window_title(display, "ArtDeco");
@@ -353,13 +281,17 @@ int reFase1(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 2 - 225 * scale_x, 350 * scale_y, now_w / 2 + 225 * scale_x, 800 * scale_y, al_map_rgb(255, 255, 255));
         al_draw_rectangle(now_w / 2 - 225 * scale_x, 350 * scale_y, now_w / 2 + 225 * scale_x, 800 * scale_y, al_map_rgb(0, 0, 0), 1);
 
+        int squareS = (int)round(450 * scale_y / (gameHeight + 1));
+        ALLEGRO_FONT* fontHint = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", squareS, 0);
+        
         if (playerLifes > 0) {
-            int x0 = (int)round(now_w / 2 - 225 * scale_x);
+            int x0 = (int)round(now_w / 2 - 112 * scale_x);
             int y0 = (int)round(350 * scale_y);
-            int squareS = (int)round(450 * scale_x / 11);
-
-            gridLogic(x0, y0, squareS, 11, 6, boxes, font_text2, mouseX, mouseY, mouseB);
+            
+            gridLogic(x0, y0, squareS, gameWidth, gameHeight, boxes, fontHint, mouseX, mouseY, mouseB, coords, playerCoords, &playerBlacks, &playerLifes);
+            if (gameBlacks == playerBlacks) { *pFasesDesb = 1; break; }
         }
+
 
         al_draw_scaled_bitmap(relogio, 0, 0, al_get_bitmap_width(relogio), al_get_bitmap_height(relogio), 1325 * scale_x, 360 * scale_y, 50 * scale_x, 50 * scale_y, 0);
         al_draw_filled_rectangle(now_w / 2 + 427.5 * scale_x, 350 * scale_y, now_w / 2 + 577.5 * scale_x, 420 * scale_y, al_map_rgba(240, 209, 86, 70));
@@ -370,6 +302,7 @@ int reFase1(ALLEGRO_DISPLAY* display) {
         al_destroy_font(font_tittle);
         al_destroy_font(font_text);
         al_destroy_font(font_text2);
+        al_destroy_font(fontHint);
     }
 
     al_destroy_bitmap(moldura);

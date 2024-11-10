@@ -60,9 +60,14 @@ const int WIDTH = 1920;
 const int HEIGHT = 985;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, DETALHEREF1, DETALHEIMF1, REFASE1};
-int telaAtual = 9;
+int telaAtual = 3;
+int fasesDesbloqueadas[30];
+
 
 int main() {
+    
+    for (int i = 0; i < 30; i++) { fasesDesbloqueadas[i] = 0; }
+
     al_init();
     al_set_new_display_flags(ALLEGRO_RESIZABLE);
     ALLEGRO_DISPLAY* display = al_create_display(WIDTH, HEIGHT);
@@ -72,8 +77,7 @@ int main() {
         if (telaAtual == -1) {
             telaInicial(display);
             renascentismo(display);
-            reFase1GameLogic(display);
-            reFase1(display);
+            reFase1(display, &fasesDesbloqueadas[0]);
             opcoes(display);
             detalheObra(display);
             vanguardas(display);
@@ -89,7 +93,11 @@ int main() {
         }
 
         if (telaAtual == 3) {
-            telaAtual = reFase1(display);
+            //COMO É A PRIMEIRA FASE N TEM IF, NAS SEGUINTES FAZER 
+            //if(fasesDesbloqueadas[I - 1] == 1)
+            //else{ telaAtual = SELEÇÃO DE TELA BASEADA NA VANGUARDA (RENASCENTISMO = 2)}
+
+            telaAtual = reFase1(display, &fasesDesbloqueadas[0]);
         }
 
         if (telaAtual == 4) {
@@ -129,7 +137,9 @@ int main() {
         }
 
         if (telaAtual == 13) {
-            telaAtual = detalheReF1(display);
+            if (fasesDesbloqueadas[0] == 1) {
+                telaAtual = detalheReF1(display);
+            }
         }
 
         if (telaAtual == 14) {

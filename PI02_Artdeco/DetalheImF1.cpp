@@ -73,7 +73,7 @@ int detalheImF1(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 600 * scale_y, now_w / 4 + 275 * scale_x, 640 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 602 * scale_y, now_w / 4 + 273 * scale_x, 638 * scale_y, al_map_rgb(78, 110, 141));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 600 * scale_y, ALLEGRO_ALIGN_CENTER, "Título: A Mona Lisa");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 600 * scale_y, ALLEGRO_ALIGN_CENTER, "Tï¿½tulo: A Mona Lisa");
 
         al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 660 * scale_y, now_w / 4 + 275 * scale_x, 700 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 662 * scale_y, now_w / 4 + 273 * scale_x, 698 * scale_y, al_map_rgb(47, 106, 166));
@@ -81,7 +81,7 @@ int detalheImF1(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 720 * scale_y, now_w / 4 + 275 * scale_x, 760 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 722 * scale_y, now_w / 4 + 273 * scale_x, 758 * scale_y, al_map_rgb(94, 141, 150));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 720 * scale_y, ALLEGRO_ALIGN_CENTER, "Localização: Louvre, Paris");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 720 * scale_y, ALLEGRO_ALIGN_CENTER, "Localizaï¿½ï¿½o: Louvre, Paris");
 
         al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 780 * scale_y, now_w / 4 + 275 * scale_x, 820 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 782 * scale_y, now_w / 4 + 273 * scale_x, 818 * scale_y, al_map_rgb(102, 165, 184));
@@ -89,11 +89,11 @@ int detalheImF1(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 2 - 163 * scale_x, 197 * scale_y, now_w / 2 + 623 * scale_x, 823 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_rectangle(now_w / 2 - 160 * scale_x, 200 * scale_y, now_w / 2 + 620 * scale_x, 820 * scale_y, al_map_rgba(228, 195, 78, 70));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 200 * scale_y, 0, "Mona Lisa também conhecida como A Gioconda");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 240 * scale_y, 0, "ou ainda Mona Lisa del Giocondo é a mais");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 280 * scale_y, 0, "notável e conhecida obra de Leonardo da Vinci,");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 200 * scale_y, 0, "Mona Lisa tambï¿½m conhecida como A Gioconda");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 240 * scale_y, 0, "ou ainda Mona Lisa del Giocondo ï¿½ a mais");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 280 * scale_y, 0, "notï¿½vel e conhecida obra de Leonardo da Vinci,");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 320 * scale_y, 0, "um dos mais eminentes homens do Renascimento");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 360 * scale_y, 0, "italiano. Sua pintura foi iniciada em 1503 e é");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 360 * scale_y, 0, "italiano. Sua pintura foi iniciada em 1503 e ï¿½");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, 400 * scale_y, 0, "nesta obra que o artista melhor concebeu...");
 
         al_flip_display();
