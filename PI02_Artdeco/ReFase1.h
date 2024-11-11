@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int reFase1(ALLEGRO_DISPLAY* display, int* pFasesDesb);
+int fase(ALLEGRO_DISPLAY* display, int* pFasesDesb, int level, int returnScreen);
 #endif

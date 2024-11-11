@@ -6,6 +6,5 @@
 #include <vector>
 
 std::vector<std::vector<int>> criarMatriz(int level);
-int getGameWidth(int level);
-int getGameHeight(int level);
+void faseTitle(int level, char* buffer, size_t tamanho);
 #endif

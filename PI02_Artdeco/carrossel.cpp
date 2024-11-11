@@ -5,11 +5,12 @@
 #include <allegro5/allegro_primitives.h>
 #include <stdio.h>
 #include "Carrossel.h"
+#include "DescData.h"
 
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-int carrossel(ALLEGRO_DISPLAY* display) {
+int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
 
     int now_w = al_get_display_width(display);
     int now_h = al_get_display_height(display);
@@ -35,7 +36,20 @@ int carrossel(ALLEGRO_DISPLAY* display) {
     al_show_mouse_cursor(display);
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
+    int meioCoord = -1;
+    for (int i = 0; i < 30; i++) {
+        if (quadrosDesb[i] == 1) {
+            meioCoord = i;
+            break;
+        }
+    }
 
+    char buffer[50];
+    ALLEGRO_BITMAP* quadroMeio = al_load_bitmap("");
+    ALLEGRO_BITMAP* quadroEsquerda = al_load_bitmap("");
+    ALLEGRO_BITMAP* quadroDireita = al_load_bitmap("");
+  
+    
     while (true) {
 
         ALLEGRO_EVENT event;
@@ -64,16 +78,63 @@ int carrossel(ALLEGRO_DISPLAY* display) {
         int g = 0;
         int b = 0;
 
+        
+        if (meioCoord != -1) {
+            getQuadro(meioCoord, buffer, sizeof(buffer));
+            quadroMeio = al_load_bitmap(buffer);
+        }
+        
+        if (meioCoord > 0) {
+            int dirCoord = -1;
+            for (int i = meioCoord-1; i >= 0; i--) {
+                if (quadrosDesb[i] == 1) {
+                    dirCoord = i;
+                    break;
+                }
+            }
+
+            if (dirCoord != -1) {
+                getQuadro(dirCoord, buffer, sizeof(buffer));
+                quadroEsquerda = al_load_bitmap(buffer);
+            }
+            
+        }
+        
+        if (meioCoord > -1 && meioCoord < 29) {
+            int esqCoord = -1;
+            for (int i = meioCoord+1; i < 30; i++) {
+                if (quadrosDesb[i] == 1) {
+                    esqCoord = i;
+                    break;
+                }
+            }
+
+            if (esqCoord != -1) {
+                getQuadro(esqCoord, buffer, sizeof(buffer));
+                quadroDireita = al_load_bitmap(buffer);
+            }
+
+        }
+
         al_clear_to_color(al_map_rgb(196, 196, 196));
         al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230*scale_x, 125 * scale_y, 1500 * scale_x, 735 * scale_y, 0);
         al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
-        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5, 205 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Op��es");
-        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Op��es");
+        al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
+        al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
 
-        al_draw_text(font_options, al_map_rgb(r, g, b), 795 * scale_x, 400 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Som:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 830 * scale_x, 500 * scale_y, ALLEGRO_ALIGN_CENTER, u8"M�sica:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 870 * scale_x, 600 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Resolu��o:");
-        al_draw_text(font_options, al_map_rgb(r, g, b), 805 * scale_x, 700 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Dicas:");
+        if (quadroMeio) {
+            al_draw_scaled_bitmap(quadroMeio, 0, 0, al_get_bitmap_width(quadroMeio), al_get_bitmap_height(quadroMeio), now_w / 2 - 150 * scale_x, 350 * scale_y, 300 * scale_x, 350 * scale_y, 0);
+            al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 1000 * scale_y, ALLEGRO_ALIGN_CENTER, "TITULO QUADRO");
+        }
+        
+        if (quadroEsquerda) {
+            al_draw_scaled_bitmap(quadroEsquerda, 0, 0, al_get_bitmap_width(quadroEsquerda), al_get_bitmap_height(quadroEsquerda), now_w / 2 - 450 * scale_x, 400 * scale_y, 200 * scale_x, 250 * scale_y, 0);
+        }
+
+        if (quadroDireita) {
+            al_draw_scaled_bitmap(quadroDireita, 0, 0, al_get_bitmap_width(quadroDireita), al_get_bitmap_height(quadroDireita), now_w / 2 + 250 * scale_x, 400 * scale_y, 200 * scale_x, 250 * scale_y, 0);
+        }
+        
 
         if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
             r = 228;
@@ -100,6 +161,8 @@ int carrossel(ALLEGRO_DISPLAY* display) {
     al_destroy_event_queue(event_queue);
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
-
+    al_destroy_bitmap(quadroMeio);
+    al_destroy_bitmap(quadroEsquerda);
+    al_destroy_bitmap(quadroDireita);
     return 1;
 }

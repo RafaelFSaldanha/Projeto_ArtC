@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int carrossel(ALLEGRO_DISPLAY* display);
+int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]);
 #endif

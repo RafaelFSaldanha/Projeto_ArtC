@@ -57,22 +57,10 @@ std::vector<std::vector<int>> criarMatriz(int level) {
 	return matriz;
 }
 
-int getGameWidth(int level) {
-	int width = 0;
+void faseTitle(int level, char* buffer, size_t tamanho) {
 
-	if (level == 0) { width = 17; }
-	else if (level == 1) { width = 28; }
-	//else if (level == 2) { width = 0; }
-
-	return width;
-}
-
-int getGameHeight(int level) {
-	int height = 0;
-
-	if (level == 0) { height = 25; }
-	else if (level == 1) { height = 14; }
-	//else if (level == 2) { height = 0; }
-
-	return height;
+	if(level == 0){ snprintf(buffer, tamanho, "Fase 1: Mona Lisa"); }
+	else if (level == 1) { snprintf(buffer, tamanho, "Fase 2: Name"); }
+	else if (level == 2) { snprintf(buffer, tamanho, "Fase 3: Name"); }
+	else if (level == 3) { snprintf(buffer, tamanho, "Fase 4: Name"); }
 }

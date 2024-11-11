@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="carrossel.cpp" />
     <ClCompile Include="Cubismo.cpp" />
+    <ClCompile Include="DescData.cpp" />
     <ClCompile Include="DetalheImF1.cpp" />
     <ClCompile Include="DetalheReF1.cpp" />
     <ClCompile Include="Expressionismo.cpp" />
@@ -163,6 +164,7 @@
   <ItemGroup>
     <ClInclude Include="Carrossel.h" />
     <ClInclude Include="Cubismo.h" />
+    <ClInclude Include="DescData.h" />
     <ClInclude Include="DetalheImF1.h" />
     <ClInclude Include="detalheReF1.h" />
     <ClInclude Include="DetalhesObra.h" />
