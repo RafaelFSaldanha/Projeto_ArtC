@@ -60,9 +60,9 @@ const int WIDTH = 1920;
 const int HEIGHT = 985;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, DETALHEREF1, DETALHEIMF1, REFASE1};
-int telaAtual = 8;
+int telaAtual = 13;
 int fasesDesbloqueadas[30];
-int quadrosDesb[30] = {0, 1, 0, 1, 0};
+int quadrosDesb[30] = {0, 1, 0, 0, 1};
 
 
 int main() {
@@ -98,7 +98,7 @@ int main() {
             //if(fasesDesbloqueadas[I - 1] == 1)
             //else{ telaAtual = SELEÇÃO DE TELA BASEADA NA VANGUARDA (RENASCENTISMO = 2)}
 
-            telaAtual = fase(display, &fasesDesbloqueadas[0], 1, 2) ;
+            telaAtual = fase(display, &fasesDesbloqueadas[0], 1, 2);
         }
 
         if (telaAtual == 4) {
@@ -138,10 +138,10 @@ int main() {
         }
 
         if (telaAtual == 13) {
-            if (fasesDesbloqueadas[0] == 0) {
+            if (fasesDesbloqueadas[1] == 1) {
                 telaAtual = detalheReF1(display, 1, 6);
             }
-            else { telaAtual = 2; }
+            else { telaAtual = 8; }
         }
 
         if (telaAtual == 14) {

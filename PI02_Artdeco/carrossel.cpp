@@ -122,6 +122,9 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
 
+        al_draw_filled_circle(295 * scale_x, now_h / 2, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
+
         if (quadroMeio) {
             al_draw_scaled_bitmap(quadroMeio, 0, 0, al_get_bitmap_width(quadroMeio), al_get_bitmap_height(quadroMeio), now_w / 2 - 150 * scale_x, 350 * scale_y, 300 * scale_x, 350 * scale_y, 0);
             al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 1000 * scale_y, ALLEGRO_ALIGN_CENTER, "TITULO QUADRO");
