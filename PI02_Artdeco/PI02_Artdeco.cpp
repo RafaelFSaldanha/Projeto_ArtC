@@ -60,9 +60,9 @@ const int WIDTH = 1920;
 const int HEIGHT = 985;
 
 enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, DETALHEREF1, DETALHEIMF1, REFASE1};
-int telaAtual = 13;
+int telaAtual = 4;
 int fasesDesbloqueadas[30];
-int quadrosDesb[30] = {0, 1, 0, 0, 1};
+int quadrosDesb[30] = {1, 1, 1, 1, 1};
 
 
 int main() {
@@ -90,63 +90,59 @@ int main() {
         }
 
         if (telaAtual == 2) {
-            telaAtual = renascentismo(display);
+            telaAtual = personalizacao(display);
         }
 
         if (telaAtual == 3) {
+            telaAtual = opcoes(display);
+        }
+
+        if (telaAtual == 4) {
+            telaAtual = vanguardas(display);
+        }
+
+        if (telaAtual == 5) {
+            telaAtual = renascentismo(display);
+        }
+
+        if (telaAtual == 6) {
+            telaAtual = impressionismo(display);
+        }
+
+        if (telaAtual == 7) {
+            telaAtual = surrealismo(display);
+        }
+
+        if (telaAtual == 8) {
+            telaAtual = expressionismo(display);
+        }
+
+        if (telaAtual == 9) {
+            telaAtual = cubismo(display);
+        }
+
+        if (telaAtual == 10) {
+            //FUTURISMO
+        }
+
+        if (telaAtual == 11) {
+            telaAtual = carrossel(display, quadrosDesb);
+        }
+
+        //IDS DE 12 Á 41
+        if (telaAtual >= 12 && telaAtual <= 41) {
             //COMO É A PRIMEIRA FASE N TEM IF, NAS SEGUINTES FAZER 
             //if(fasesDesbloqueadas[I - 1] == 1)
             //else{ telaAtual = SELEÇÃO DE TELA BASEADA NA VANGUARDA (RENASCENTISMO = 2)}
 
-            telaAtual = fase(display, &fasesDesbloqueadas[0], 1, 2);
+            telaAtual = fase(display, &fasesDesbloqueadas[telaAtual-12], telaAtual-12, 4);
         }
 
-        if (telaAtual == 4) {
-            telaAtual = opcoes(display);
+        //IDS DE 42 Á 71
+        if (telaAtual >= 42) {
+            telaAtual = detalheReF1(display, telaAtual - 42, 6);
         }
 
-        if (telaAtual == 5) {
-            telaAtual = detalheObra(display);
-        }
-
-        if (telaAtual == 6) {
-            telaAtual = vanguardas(display);
-        }
-
-        if (telaAtual == 7) {
-            telaAtual = personalizacao(display);
-        }
-
-        if (telaAtual == 8) {
-            telaAtual = carrossel(display, quadrosDesb);
-        }
-
-        if (telaAtual == 9) {
-            telaAtual = impressionismo(display);
-        }
-
-        if (telaAtual == 10) {
-            telaAtual = surrealismo(display);
-        } 
-        
-        if (telaAtual == 11) {
-            telaAtual = expressionismo(display);
-        }
-
-        if (telaAtual == 12) {
-            telaAtual = cubismo(display);
-        }
-
-        if (telaAtual == 13) {
-            if (fasesDesbloqueadas[1] == 1) {
-                telaAtual = detalheReF1(display, 1, 6);
-            }
-            else { telaAtual = 8; }
-        }
-
-        if (telaAtual == 14) {
-            telaAtual = detalheImF1(display);
-        }
     }
 
     al_destroy_display(display);

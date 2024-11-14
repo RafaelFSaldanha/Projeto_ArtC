@@ -83,7 +83,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 3;
+                novaTela = 12;
                 break;
             }
         }
@@ -102,7 +102,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 6;
+                novaTela = 4;
                 break;
 
             }
@@ -116,7 +116,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 5;
+                novaTela = 11;
                 break;
 
             }
@@ -130,7 +130,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 4;
+                novaTela = 3;
                 break;
 
             }

@@ -116,5 +116,5 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
 
-    return 1;
+    return 11;
 }

@@ -40,7 +40,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* img3 = al_load_bitmap("./assets/img/re_escola_de_atenas.png");
     ALLEGRO_BITMAP* img4 = al_load_bitmap("./assets/img/re_nascimento_de_venus.png");
     ALLEGRO_BITMAP* img5 = al_load_bitmap("./assets/img/re_ultima_ceia.png");
-    int novaTela = 0;
+    int novaTela = 4;
 
     while (true) {
 
@@ -93,7 +93,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 3;
+                novaTela = 12;
                 break;
             }
         }
@@ -110,6 +110,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
             g = 190;
             b = 0;
             if (mouseB == 1) {
+                novaTela = 13;
                 r = 0; g = 0; b = 0;
                 break;
             }
@@ -127,6 +128,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
             g = 190;
             b = 0;
             if (mouseB == 1) {
+                novaTela = 14;
                 r = 0; g = 0; b = 0;
                 break;
             }
@@ -144,6 +146,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
             g = 190;
             b = 0;
             if (mouseB == 1) {
+                novaTela = 15;
                 r = 0; g = 0; b = 0;
                 break;
             }
@@ -161,6 +164,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
             g = 190;
             b = 0;
             if (mouseB == 1) {
+                novaTela = 16;
                 r = 0; g = 0; b = 0;
                 break;
             }

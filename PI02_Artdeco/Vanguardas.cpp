@@ -76,7 +76,7 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 2;
+                novaTela = 5;
                 break;
 
             }
@@ -93,7 +93,7 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 12;
+                novaTela = 9;
                 break;
 
             }
@@ -110,7 +110,7 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 9;
+                novaTela = 6;
                 break;
 
             }
@@ -127,7 +127,7 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 2;
+                novaTela = 10;
                 break;
 
             }
@@ -144,7 +144,7 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 10;
+                novaTela = 7;
                 break;
 
             }
@@ -161,7 +161,7 @@ int vanguardas(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 11;
+                novaTela = 8;
                 break;
 
             }
