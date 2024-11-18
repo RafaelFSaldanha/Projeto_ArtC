@@ -40,6 +40,7 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* img3 = al_load_bitmap("./assets/img/Im_estacao_saint_lazare.png");
     ALLEGRO_BITMAP* img4 = al_load_bitmap("./assets/img/Im_campo_de_papoulas.png");
     ALLEGRO_BITMAP* img5 = al_load_bitmap("./assets/img/Im_almoco_remadores.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
     int novaTela = 0;
 
     while (true) {

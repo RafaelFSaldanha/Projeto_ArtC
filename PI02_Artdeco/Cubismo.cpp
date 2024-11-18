@@ -36,6 +36,7 @@ int cubismo(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
     ALLEGRO_BITMAP* monalisa_real = al_load_bitmap("./assets/img/monalisa_real.png");
     ALLEGRO_BITMAP* monalisa_blur = al_load_bitmap("./assets/img/monalisa_blur.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
 
     while (true) {
 

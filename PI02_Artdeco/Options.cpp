@@ -36,6 +36,10 @@ int opcoes(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
     ALLEGRO_BITMAP* seta = al_load_bitmap("./assets/img/seta.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
+    int novaTela = 0;
+
+    int telaNova = 1;
 
     while (true) {
 
@@ -115,15 +119,15 @@ int opcoes(ALLEGRO_DISPLAY* display) {
             b = 78;
             if (mouseB == 1) {
                 r = 196; g = 196; b = 196;
+                novaTela = 1;
             }
         }
         else { r = 196; g = 196; b = 196; }
 
-        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30* scale_y, al_map_rgba(0, 0, 0, 70));
-        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30* scale_y, al_map_rgb(r, g, b));
-        al_draw_circle(300 * scale_x, 200 * scale_y, 30* scale_y, al_map_rgb(0, 0, 0), 1.5);
-        al_draw_text(font_options, al_map_rgba(0, 0, 0, 70), 297 * scale_x, 170 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
-        al_draw_text(font_options, al_map_rgb(0, 0, 0), 300 * scale_x, 167 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
+        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
+        al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
+        al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 278 * scale_x, 180 * scale_y, 40 * scale_x, 40 * scale_y, 0);
 
         al_flip_display();
         al_destroy_font(font_tittle);

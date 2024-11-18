@@ -40,6 +40,7 @@ int expressionismo(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* primeiros_animais = al_load_bitmap("./assets/img/ex_primeiros_animais.png");
     ALLEGRO_BITMAP* cinco_mulheres = al_load_bitmap("./assets/img/ex_cinco_mulheres.png");
     ALLEGRO_BITMAP* retirantes = al_load_bitmap("./assets/img/ex_retirantes.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
 
     while (true) {
 

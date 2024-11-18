@@ -138,7 +138,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
         else { r = 0; g = 0; b = 0; }
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 700 * scale_y, ALLEGRO_ALIGN_CENTER, "Opções");
 
-        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
+        /*if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
             r = 228;
             g = 195;
             b = 78;
@@ -152,7 +152,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
         al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
         al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
         al_draw_text(font_text, al_map_rgba(0, 0, 0, 70), 297 * scale_x, 170 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 300 * scale_x, 167 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), 300 * scale_x, 167 * scale_y, ALLEGRO_ALIGN_CENTER, "?"); */
 
         al_flip_display();
         al_destroy_font(font_tittle);

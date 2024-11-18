@@ -36,6 +36,7 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
     al_show_mouse_cursor(display);
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
     int meioCoord = -1;
     int quadrosTotal = 0;
     int quadrosDisplay[30];
@@ -174,7 +175,6 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
             al_draw_filled_circle(1600 * scale_x, now_h / 2, 30 * scale_y, al_map_rgba(r, g, b, 70));
             
         }
-        
 
         if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
             r = 228;
@@ -182,6 +182,7 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
             b = 78;
             if (mouseB == 1) {
                 r = 196; g = 196; b = 196;
+                telaNova = 1;
             }
         }
         else { r = 196; g = 196; b = 196; }
@@ -189,8 +190,7 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
         al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
-        al_draw_text(font_options, al_map_rgba(0, 0, 0, 70), 297 * scale_x, 170 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
-        al_draw_text(font_options, al_map_rgb(0, 0, 0), 300 * scale_x, 167 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
+        al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 278 * scale_x, 180 * scale_y, 40 * scale_x, 40 * scale_y, 0);
 
         al_flip_display();
         al_destroy_font(font_tittle);

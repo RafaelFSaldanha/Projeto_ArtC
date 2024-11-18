@@ -148,6 +148,7 @@
     <ClCompile Include="Expressionismo.cpp" />
     <ClCompile Include="Impressionismo.cpp" />
     <ClCompile Include="LevelData.cpp" />
+    <ClCompile Include="Pause.cpp" />
     <ClCompile Include="Renascentismo.cpp" />
     <ClCompile Include="ReFase1.cpp" />
     <ClCompile Include="DetalhesObra.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Expressionismo.h" />
     <ClInclude Include="Impressionismo.h" />
     <ClInclude Include="LevelData.h" />
+    <ClInclude Include="Pause.h" />
     <ClInclude Include="Renascentismo.h" />
     <ClInclude Include="ReFase1.h" />
     <ClInclude Include="Options.h" />

@@ -40,6 +40,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* img3 = al_load_bitmap("./assets/img/re_escola_de_atenas.png");
     ALLEGRO_BITMAP* img4 = al_load_bitmap("./assets/img/re_nascimento_de_venus.png");
     ALLEGRO_BITMAP* img5 = al_load_bitmap("./assets/img/re_ultima_ceia.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
     int novaTela = 4;
 
     while (true) {
@@ -176,6 +177,22 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "A Última Ceia");
         al_draw_scaled_bitmap(img5, 0, 0, al_get_bitmap_width(img5), al_get_bitmap_height(img5), 1416 * scale_x, 560 * scale_y, 240 * scale_x, 150 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 5");
+
+        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
+            r = 228;
+            g = 195;
+            b = 78;
+            if (mouseB == 1) {
+                r = 196; g = 196; b = 196;
+                novaTela = 4;
+            }
+        }
+        else { r = 196; g = 196; b = 196; }
+
+        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
+        al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
+        al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 278 * scale_x, 180 * scale_y, 40 * scale_x, 40 * scale_y, 0);
 
         al_flip_display();
         al_destroy_font(font_tittle);

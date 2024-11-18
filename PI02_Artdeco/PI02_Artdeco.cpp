@@ -11,6 +11,7 @@
 #include "Vanguardas.h"
 #include "Visuals.h"
 #include "Carrossel.h"
+#include "Pause.h"
 
 #include "Renascentismo.h"
 #include "Impressionismo.h"
@@ -21,46 +22,14 @@
 #include "ReFase1.h"
 
 #include "DetalheReF1.h"
-//#include "DetalheReF2.h"
-//#include "DetalheReF3.h"
-//#include "DetalheReF4.h"
-//#include "DetalheReF5.h"
 
 #include "DetalheImF1.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
-//#include "DetalheReF5.h"
 
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, DETALHEREF1, DETALHEIMF1, REFASE1};
-int telaAtual = 4;
+enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, DETALHEREF1, DETALHEIMF1, REFASE1, PAUSE};
+int telaAtual = 1;
 int fasesDesbloqueadas[30];
 int quadrosDesb[30] = {1, 1, 1, 1, 1};
 
