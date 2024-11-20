@@ -37,6 +37,7 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
     ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
+    ALLEGRO_BITMAP* go = al_load_bitmap("./assets/img/go.png");
     int meioCoord = -1;
     int quadrosTotal = 0;
     int quadrosDisplay[30];
@@ -114,8 +115,8 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         }
        
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230*scale_x, 125 * scale_y, 1500 * scale_x, 735 * scale_y, 0);
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
+        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 190 * scale_x, 125 * scale_y, 1540 * scale_x, 735 * scale_y, 0);
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -180 * scale_x, -73 * scale_y, 2220 * scale_x, 1165 * scale_y, 0);
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5, 205 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
 
@@ -123,57 +124,55 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
             al_draw_scaled_bitmap(quadroMeio, 0, 0, al_get_bitmap_width(quadroMeio), al_get_bitmap_height(quadroMeio), now_w / 2 - 150 * scale_x, 350 * scale_y, 300 * scale_x, 350 * scale_y, 0);
             
             if (mouseX > now_w / 2 - 150 * scale_x && mouseX < now_w / 2 + 200 * scale_x * scale_y && mouseY > 350 * scale_y && mouseY < 700 * scale_y) {
-                r = 0;
-                g = 0;
-                b = 255;
+                r = 225;
+                g = 190;
+                b = 0;
                 if (mouseB == 1) {
                     r = 0; g = 255; b = 0;
                     telaNova = quadrosDisplay[meioCoord] + 42;
                     break;
                 }
             }
-            else { r = 255; g = 0; b = 0; }
+            else { r = 196; g = 196; b = 196; }
 
             getTitulo(quadrosDisplay[meioCoord], buffer, sizeof(buffer));
             al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 700 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
-        
-        
-            
         }
         
         if (quadroEsquerda) {
             al_draw_scaled_bitmap(quadroEsquerda, 0, 0, al_get_bitmap_width(quadroEsquerda), al_get_bitmap_height(quadroEsquerda), now_w / 2 - 450 * scale_x, 400 * scale_y, 200 * scale_x, 250 * scale_y, 0);
             
             if (mouseX > 295 * scale_x - 30 * scale_y && mouseX < 295 * scale_x + 30 * scale_y && mouseY > now_h / 2 - 30 * scale_y && mouseY < now_h / 2 + 30 * scale_y) {
-                r = 0;
-                g = 0;
-                b = 255;
+                r = 228;
+                g = 195;
+                b = 78;
                 if (mouseB == 1) {
-                    r = 0; g = 255; b = 0;
+                    r = 196; g = 196; b = 196;
                     meioCoord--;
                 }
             }
-            else { r = 255; g = 0; b = 0; }
+            else { r = 196; g = 196; b = 196; }
 
-            al_draw_filled_circle(295 * scale_x, now_h / 2, 30 * scale_y, al_map_rgba(r, g, b, 70));
+            al_draw_filled_circle(295 * scale_x, now_h / 2, 30 * scale_y, al_map_rgb(r, g, b));
+            al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 272 * scale_x, now_h / 2 - 18 * scale_y, 40 * scale_x, 40 * scale_y, 0);
         }
        
         if (quadroDireita) {
             al_draw_scaled_bitmap(quadroDireita, 0, 0, al_get_bitmap_width(quadroDireita), al_get_bitmap_height(quadroDireita), now_w / 2 + 250 * scale_x, 400 * scale_y, 200 * scale_x, 250 * scale_y, 0);
        
             if (mouseX > 1600 * scale_x - 30 * scale_y && mouseX < 1600 * scale_x + 30 * scale_y && mouseY > now_h / 2 - 30 * scale_y && mouseY < now_h / 2 + 30 * scale_y) {
-                r = 0;
-                g = 0;
-                b = 255;
+                r = 228;
+                g = 195;
+                b = 78;
                 if (mouseB == 1) {
-                    r = 0; g = 255; b = 0;
+                    r = 196; g = 196; b = 196;
                     meioCoord++;
                 }
             }
-            else { r = 255; g = 0; b = 0; }
+            else { r = 196; g = 196; b = 196; }
 
-            al_draw_filled_circle(1600 * scale_x, now_h / 2, 30 * scale_y, al_map_rgba(r, g, b, 70));
-            
+            al_draw_filled_circle(1600 * scale_x, now_h / 2, 30 * scale_y, al_map_rgb(r, g, b));
+            al_draw_scaled_bitmap(go, 0, 0, al_get_bitmap_width(go), al_get_bitmap_height(go), 1585 * scale_x, now_h / 2 - 18 * scale_y, 40 * scale_x, 40 * scale_y, 0);
         }
 
         if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
@@ -183,6 +182,7 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
             if (mouseB == 1) {
                 r = 196; g = 196; b = 196;
                 telaNova = 1;
+                break;
             }
         }
         else { r = 196; g = 196; b = 196; }

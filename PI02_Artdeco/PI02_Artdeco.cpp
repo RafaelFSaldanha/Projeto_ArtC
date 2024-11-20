@@ -11,13 +11,13 @@
 #include "Vanguardas.h"
 #include "Visuals.h"
 #include "Carrossel.h"
-#include "Pause.h"
 
 #include "Renascentismo.h"
 #include "Impressionismo.h"
 #include "Surrealismo.h"
 #include "Expressionismo.h"
 #include "Cubismo.h"
+#include "Futurismo.h"
 
 #include "ReFase1.h"
 
@@ -28,7 +28,7 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, DETALHEREF1, DETALHEIMF1, REFASE1, PAUSE};
+enum TelaAtiva {DEBUG, PRINCIPAL, OPTIONS, OBRA, VANGUARDAS, VISUALS, CARROSSEL, RENASCENTISMO, IMPRESSIONISMO, SURREALISMO, EXPRESSIONISMO, CUBISMO, FUTURISMO, DETALHEREF1, DETALHEIMF1, REFASE1};
 int telaAtual = 1;
 int fasesDesbloqueadas[30];
 int quadrosDesb[30] = {1, 1, 1, 1, 1};
@@ -36,7 +36,7 @@ int quadrosDesb[30] = {1, 1, 1, 1, 1};
 
 int main() {
     
-    for (int i = 0; i < 30; i++) { fasesDesbloqueadas[i] = 0; }
+    for (int i = 0; i < 30; i++) { fasesDesbloqueadas[i] = 1; }
 
     al_init();
     al_set_new_display_flags(ALLEGRO_RESIZABLE);
@@ -91,11 +91,11 @@ int main() {
         }
 
         if (telaAtual == 10) {
-            //FUTURISMO
+            telaAtual = futurismo(display);
         }
 
         if (telaAtual == 11) {
-            telaAtual = carrossel(display, quadrosDesb);
+            telaAtual = carrossel(display, fasesDesbloqueadas);
         }
 
         //IDS DE 12 Á 41
@@ -109,9 +109,8 @@ int main() {
 
         //IDS DE 42 Á 71
         if (telaAtual >= 42) {
-            telaAtual = detalheReF1(display, telaAtual - 42, 6);
+            telaAtual = detalheReF1(display, telaAtual - 42, 2);
         }
-
     }
 
     al_destroy_display(display);

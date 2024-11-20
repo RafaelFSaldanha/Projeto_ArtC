@@ -83,12 +83,12 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Período artístico e cultural dos séculos XIV ao XVI que marcou a transição da Idade Média");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 350 * scale_y, ALLEGRO_ALIGN_CENTER, "para a Moderna. Caracterizado pelo resgate dos valores da cultura greco-romana,");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 380 * scale_y, ALLEGRO_ALIGN_CENTER, "desenvolvimento da perspectiva, valorização do ser humano (humanismo) e busca pela");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "perfeição técnica. Principais artistas: Leonardo da Vinci e Michelangelo.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "perfeição técnica. Principais artistas: Leonardo da Vinci e Michelangelo.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));
 
-        if (mouseX > 264 && mouseX < 504 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 284 && mouseX < 484 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -103,16 +103,16 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 4 - 170 * scale_x, 465 * scale_y, now_w / 4 - 20 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 165 * scale_x, 470 * scale_y, now_w / 4 - 25 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "Mona lisa");
-        al_draw_scaled_bitmap(img1, 0, 0, al_get_bitmap_width(img1), al_get_bitmap_height(img1), 264 * scale_x, 525 * scale_y, 240 * scale_x, 250 * scale_y, 0);
+        al_draw_scaled_bitmap(img1, 0, 0, al_get_bitmap_width(img1), al_get_bitmap_height(img1), 284 * scale_x, 525 * scale_y, 200 * scale_x, 250 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 1");
 
-        if (mouseX > 552 && mouseX < 792 && mouseY > 560 * scale_y && mouseY < 710 * scale_y) {
+        if (mouseX > 552 && mouseX < 792 && mouseY > 585 * scale_y && mouseY < 715 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
             if (mouseB == 1) {
-                novaTela = 13;
                 r = 0; g = 0; b = 0;
+                novaTela = 13;
                 break;
             }
         }
@@ -121,16 +121,16 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 2 - 405 * scale_x, 465 * scale_y, now_w / 2 - 170 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 400 * scale_x, 470 * scale_y, now_w / 2 - 175 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 288 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "A Criação de Adão");
-        al_draw_scaled_bitmap(img2, 0, 0, al_get_bitmap_width(img2), al_get_bitmap_height(img2), 552 * scale_x, 560 * scale_y, 240 * scale_x, 150 * scale_y, 0);
+        al_draw_scaled_bitmap(img2, 0, 0, al_get_bitmap_width(img2), al_get_bitmap_height(img2), 552 * scale_x, 585 * scale_y, 240 * scale_x, 130 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 288 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 2");
 
-        if (mouseX > 840 && mouseX < 1080 && mouseY > 560 * scale_y && mouseY < 710 * scale_y) {
+        if (mouseX > 840 && mouseX < 1080 && mouseY > 575 * scale_y && mouseY < 725 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
             if (mouseB == 1) {
-                novaTela = 14;
                 r = 0; g = 0; b = 0;
+                novaTela = 14;
                 break;
             }
         }
@@ -139,16 +139,16 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 2 - 110 * scale_x, 465 * scale_y, now_w / 2 + 110 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 105 * scale_x, 470 * scale_y, now_w / 2 + 105 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "Escola de Atenas");
-        al_draw_scaled_bitmap(img3, 0, 0, al_get_bitmap_width(img3), al_get_bitmap_height(img3), now_w / 2 - 120 * scale_x, 560 * scale_y, 240 * scale_x, 150 * scale_y, 0);
+        al_draw_scaled_bitmap(img3, 0, 0, al_get_bitmap_width(img3), al_get_bitmap_height(img3), now_w / 2 - 120 * scale_x, 575 * scale_y, 240 * scale_x, 150 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 3");
 
-        if (mouseX > 1128 && mouseX < 1368 && mouseY > 560 * scale_y && mouseY < 710 * scale_y) {
+        if (mouseX > 1128 && mouseX < 1368 && mouseY > 575 * scale_y && mouseY < 725 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
             if (mouseB == 1) {
-                novaTela = 15;
                 r = 0; g = 0; b = 0;
+                novaTela = 15;
                 break;
             }
         }
@@ -157,16 +157,16 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 2 + 145 * scale_x, 465 * scale_y, now_w / 2 + 435 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 + 150 * scale_x, 470 * scale_y, now_w / 2 + 430 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 288 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "O Nascimento de Vênus");
-        al_draw_scaled_bitmap(img4, 0, 0, al_get_bitmap_width(img4), al_get_bitmap_height(img4), 1128 * scale_x, 560 * scale_y, 240 * scale_x, 150 * scale_y, 0);
+        al_draw_scaled_bitmap(img4, 0, 0, al_get_bitmap_width(img4), al_get_bitmap_height(img4), 1128 * scale_x, 575 * scale_y, 240 * scale_x, 150 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 288 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 4");
 
-        if (mouseX > 1416 && mouseX < 1656 && mouseY > 560 * scale_y && mouseY < 710 * scale_y) {
+        if (mouseX > 1416 && mouseX < 1656 && mouseY > 575 * scale_y && mouseY < 725 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
             if (mouseB == 1) {
-                novaTela = 16;
                 r = 0; g = 0; b = 0;
+                novaTela = 16;
                 break;
             }
         }
@@ -175,7 +175,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 2 + 485 * scale_x, 465 * scale_y, now_w / 2 + 670 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 + 490 * scale_x, 470 * scale_y, now_w / 2 + 665 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "A Última Ceia");
-        al_draw_scaled_bitmap(img5, 0, 0, al_get_bitmap_width(img5), al_get_bitmap_height(img5), 1416 * scale_x, 560 * scale_y, 240 * scale_x, 150 * scale_y, 0);
+        al_draw_scaled_bitmap(img5, 0, 0, al_get_bitmap_width(img5), al_get_bitmap_height(img5), 1416 * scale_x, 575 * scale_y, 240 * scale_x, 150 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 5");
 
         if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
@@ -185,6 +185,7 @@ int renascentismo(ALLEGRO_DISPLAY* display) {
             if (mouseB == 1) {
                 r = 196; g = 196; b = 196;
                 novaTela = 4;
+                break;
             }
         }
         else { r = 196; g = 196; b = 196; }

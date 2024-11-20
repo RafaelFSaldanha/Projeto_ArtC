@@ -66,7 +66,7 @@
     <ClCompile Include="DescData.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Pause.cpp">
+    <ClCompile Include="Futurismo.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
@@ -122,7 +122,7 @@
     <ClInclude Include="DescData.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="Pause.h">
+    <ClInclude Include="Futurismo.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>

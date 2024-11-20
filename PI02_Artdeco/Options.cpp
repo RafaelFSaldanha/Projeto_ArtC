@@ -120,6 +120,7 @@ int opcoes(ALLEGRO_DISPLAY* display) {
             if (mouseB == 1) {
                 r = 196; g = 196; b = 196;
                 novaTela = 1;
+                break;
             }
         }
         else { r = 196; g = 196; b = 196; }

@@ -36,10 +36,13 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
     al_show_mouse_cursor(display);
     ALLEGRO_BITMAP* moldura = al_load_bitmap("./assets/img/moldura2.png");  
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
+    int telaNova = 0;
   
     char buffer[50];
     getQuadro(level, buffer, sizeof(buffer));
-    ALLEGRO_BITMAP* monalisa_real = al_load_bitmap(buffer);
+    ALLEGRO_BITMAP* quadro = al_load_bitmap(buffer);
+
     while (true) {
 
         ALLEGRO_EVENT event;
@@ -68,44 +71,63 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
         int b = 0;
 
         al_clear_to_color(al_map_rgb(196, 196, 196));
-        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 230 * scale_x, 125 * scale_y, 1500 * scale_x, 735 * scale_y, 0);
-        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -130 * scale_x, -73 * scale_y, 2160 * scale_x, 1165 * scale_y, 0);
+        al_draw_scaled_bitmap(noite_estrelada, 0, 0, al_get_bitmap_width(noite_estrelada), al_get_bitmap_height(noite_estrelada), 190 * scale_x, 125 * scale_y, 1540 * scale_x, 735 * scale_y, 0);
+        al_draw_scaled_bitmap(moldura, 0, 0, al_get_bitmap_width(moldura), al_get_bitmap_height(moldura), -180 * scale_x, -73 * scale_y, 2220 * scale_x, 1165 * scale_y, 0);
 
-        al_draw_scaled_bitmap(monalisa_real, 0, 0, al_get_bitmap_width(monalisa_real), al_get_bitmap_height(monalisa_real), 300 * scale_x, 200 * scale_y, 300 * scale_x, 350 * scale_y, 0);
-
-
-        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 600 * scale_y, now_w / 4 + 275 * scale_x, 640 * scale_y, al_map_rgb(0, 0, 0));
-        al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 602 * scale_y, now_w / 4 + 273 * scale_x, 638 * scale_y, al_map_rgb(78, 110, 141));
+        al_draw_scaled_bitmap(quadro, 0, 0, al_get_bitmap_width(quadro), al_get_bitmap_height(quadro), 300 * scale_x, 320 * scale_y, 300 * scale_x, 350 * scale_y, 0);
         
-        getTitulo(level, buffer, sizeof(buffer));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 600 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
+        al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 200 * scale_y, now_w / 2 + 650 * scale_x, 820 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 203 * scale_y, now_w / 2 + 647 * scale_x, 817 * scale_y, al_map_rgba(228, 195, 78, 70));
+        
+        //Título
+        al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 215 * scale_y, now_w / 2 + 650 * scale_x, 260 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 218 * scale_y, now_w / 2 + 647 * scale_x, 257 * scale_y, al_map_rgb(74, 130, 172));
 
-        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 660 * scale_y, now_w / 4 + 275 * scale_x, 700 * scale_y, al_map_rgb(0, 0, 0));
-        al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 662 * scale_y, now_w / 4 + 273 * scale_x, 698 * scale_y, al_map_rgb(47, 106, 166));
+        getTitulo(level, buffer, sizeof(buffer));
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 + 215 * scale_x, 220 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
+
+        //Autor
+        al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 295 * scale_y, now_w / 2 + 650 * scale_x, 340 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 298 * scale_y, now_w / 2 + 647 * scale_x, 337 * scale_y, al_map_rgb(74, 130, 172));
         
         getAutor(level, buffer, sizeof(buffer));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 660 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
-
-        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 720 * scale_y, now_w / 4 + 275 * scale_x, 760 * scale_y, al_map_rgb(0, 0, 0));
-        al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 722 * scale_y, now_w / 4 + 273 * scale_x, 758 * scale_y, al_map_rgb(94, 141, 150));
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 + 215 * scale_x, 300 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
         
+        //Localização
+        al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 375 * scale_y, now_w / 2 + 650 * scale_x, 420 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 378 * scale_y, now_w / 2 + 647 * scale_x, 417 * scale_y, al_map_rgb(74, 130, 172));
+
         getLoc(level, buffer, sizeof(buffer));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 720 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
-
-        al_draw_filled_rectangle(now_w / 4 - 200 * scale_x, 780 * scale_y, now_w / 4 + 275 * scale_x, 820 * scale_y, al_map_rgb(0, 0, 0));
-        al_draw_filled_rectangle(now_w / 4 - 198 * scale_x, 782 * scale_y, now_w / 4 + 273 * scale_x, 818 * scale_y, al_map_rgb(102, 165, 184));
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 + 215 * scale_x, 380 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
         
-        getAno(level, buffer, sizeof(buffer));
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 515 * scale_x, 780 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
+        //Ano
+        al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 455 * scale_y, now_w / 2 + 650 * scale_x, 500 * scale_y, al_map_rgb(0, 0, 0));
+        al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 458 * scale_y, now_w / 2 + 647 * scale_x, 497 * scale_y, al_map_rgb(74, 130, 172));
 
-        al_draw_filled_rectangle(now_w / 2 - 163 * scale_x, 197 * scale_y, now_w / 2 + 623 * scale_x, 823 * scale_y, al_map_rgba(0, 0, 0, 70));
-        al_draw_filled_rectangle(now_w / 2 - 160 * scale_x, 200 * scale_y, now_w / 2 + 620 * scale_x, 820 * scale_y, al_map_rgba(228, 195, 78, 70));
+        getAno(level, buffer, sizeof(buffer));
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 + 215 * scale_x, 460 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
 
         for (int i = 0; i < descLinhas; i++) {
             getDesc(level, i, buffer, sizeof(buffer));
-            al_draw_text(font_text, al_map_rgb(0, 0, 0), 810 * scale_x, (200 + 40 * i) * scale_y, 0, buffer);
+            al_draw_text(font_text, al_map_rgb(0, 0, 0), 800 * scale_x, (550 + 40 * i) * scale_y, 0, buffer);
         }
        
+        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
+            r = 228;
+            g = 195;
+            b = 78;
+            if (mouseB == 1) {
+                r = 196; g = 196; b = 196;
+                telaNova = 11;
+                break;
+            }
+        }
+        else { r = 196; g = 196; b = 196; }
+
+        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
+        al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
+        al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 278 * scale_x, 180 * scale_y, 40 * scale_x, 40 * scale_y, 0);
 
         al_flip_display();
         al_destroy_font(font_text);
@@ -116,5 +138,5 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
 
-    return 11;
+    return telaNova;
 }

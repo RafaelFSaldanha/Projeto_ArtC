@@ -11,6 +11,7 @@
 ALLEGRO_FONT* font;
 const int WIDTH = 1920;
 const int HEIGHT = 985;
+int novaTela = 0;
 
 /*
 0 - Branco
@@ -140,9 +141,10 @@ int gridLogic(int startX, int startY, int square, int gameWidth, int gameHeight,
     return 0;
 }
 int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen) {
-
+    novaTela = returnScreen;
     int now_w = al_get_display_width(display);
     int now_h = al_get_display_height(display);
+    ALLEGRO_BITMAP* back = al_load_bitmap("./assets/img/back.png");
 
     al_init();
     al_init_font_addon();
@@ -170,7 +172,7 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
 
     int gameBlacks = 0;
     int playerBlacks = 0;
-    int playerLifes = 1000;
+    int playerLifes = 5000000;
     
     for (int i = 0; i < gameWidth; i++) {
         for (int j = 0; j < gameHeight; j++) {
@@ -213,7 +215,7 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
         float scale_x = (float)now_w / WIDTH;
         float scale_y = (float)now_h / HEIGHT;
 
-        ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 70 * scale_y, 0);
+        ALLEGRO_FONT* font_tittle = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", 50 * scale_y, 0);
         ALLEGRO_FONT* font_text = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 50 * scale_y, 0);
         ALLEGRO_FONT* font_text2 = al_load_font("./assets/fonts/MontserratAlternates-Regular.ttf", 40 * scale_y, 0);
 
@@ -297,10 +299,28 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
         }
 
 
-        al_draw_scaled_bitmap(relogio, 0, 0, al_get_bitmap_width(relogio), al_get_bitmap_height(relogio), 1325 * scale_x, 360 * scale_y, 50 * scale_x, 50 * scale_y, 0);
-        al_draw_filled_rectangle(now_w / 2 + 427.5 * scale_x, 350 * scale_y, now_w / 2 + 577.5 * scale_x, 420 * scale_y, al_map_rgba(240, 209, 86, 70));
-        al_draw_rectangle(now_w / 4 - 150 * scale_x, 350 * scale_y, now_w / 4 + 150 * scale_x, 575 * scale_y, al_map_rgb(0, 0, 0), 1);
-        al_draw_text(font_text2, al_map_rgb(0, 0, 0), 1460 * scale_x, 360 * scale_y, ALLEGRO_ALIGN_CENTER, "7:21");
+        //al_draw_scaled_bitmap(relogio, 0, 0, al_get_bitmap_width(relogio), al_get_bitmap_height(relogio), 1325 * scale_x, 360 * scale_y, 50 * scale_x, 50 * scale_y, 0);
+        //al_draw_filled_rectangle(now_w / 2 + 427.5 * scale_x, 350 * scale_y, now_w / 2 + 577.5 * scale_x, 420 * scale_y, al_map_rgba(240, 209, 86, 70));
+        //al_draw_rectangle(now_w / 4 - 150 * scale_x, 350 * scale_y, now_w / 4 + 150 * scale_x, 575 * scale_y, al_map_rgb(0, 0, 0), 1);
+        //al_draw_text(font_text2, al_map_rgb(0, 0, 0), 1460 * scale_x, 360 * scale_y, ALLEGRO_ALIGN_CENTER, "7:21");
+        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
+            r = 228;
+            g = 195;
+            b = 78;
+            if (mouseB == 1) {
+                r = 196; g = 196; b = 196;
+                novaTela = 1;
+                break;
+            }
+        }
+        else { r = 196; g = 196; b = 196; }
+
+        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
+        al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
+        al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 278 * scale_x, 180 * scale_y, 40 * scale_x, 40 * scale_y, 0);
+
+
 
         al_flip_display();
         al_destroy_font(font_tittle);
@@ -314,5 +334,5 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
 
-    return returnScreen;
+    return novaTela;
     }
