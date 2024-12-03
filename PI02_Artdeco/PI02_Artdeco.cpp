@@ -36,7 +36,7 @@ int quadrosDesb[30] = {1, 1, 1, 1, 1};
 
 int main() {
     
-    for (int i = 0; i < 30; i++) { fasesDesbloqueadas[i] = 1; }
+    for (int i = 0; i < 30; i++) { fasesDesbloqueadas[i] = 0; }
 
     al_init();
     al_set_new_display_flags(ALLEGRO_RESIZABLE);
@@ -44,18 +44,8 @@ int main() {
     al_acknowledge_resize(display);
 
     while (telaAtual != 0) {
-        if (telaAtual == -1) {
-            telaInicial(display);
-            renascentismo(display);
-            fase(display, &fasesDesbloqueadas[0], 0, 1);
-            opcoes(display);
-            detalheObra(display);
-            vanguardas(display);
-            personalizacao(display);
-        }
-
         if (telaAtual == 1) {
-            telaAtual = telaInicial(display);
+            telaAtual = telaInicial(display, fasesDesbloqueadas);
         }
 
         if (telaAtual == 2) {
@@ -100,16 +90,18 @@ int main() {
 
         //IDS DE 12 Á 41
         if (telaAtual >= 12 && telaAtual <= 41) {
-            //COMO É A PRIMEIRA FASE N TEM IF, NAS SEGUINTES FAZER 
-            //if(fasesDesbloqueadas[I - 1] == 1)
-            //else{ telaAtual = SELEÇÃO DE TELA BASEADA NA VANGUARDA (RENASCENTISMO = 2)}
+            if(telaAtual-12 == 0){ telaAtual = fase(display, &fasesDesbloqueadas[telaAtual - 12], telaAtual - 12, 1); }
+            else if (fasesDesbloqueadas[telaAtual - 13] == 1) {
+                telaAtual = fase(display, &fasesDesbloqueadas[telaAtual - 12], telaAtual - 12, 1);
+            }
+            else { telaAtual = (telaAtual - 12) / 5 + 5; }
 
-            telaAtual = fase(display, &fasesDesbloqueadas[telaAtual-12], telaAtual-12, 4);
+            
         }
 
         //IDS DE 42 Á 71
         if (telaAtual >= 42) {
-            telaAtual = detalheReF1(display, telaAtual - 42, 2);
+            telaAtual = detalheReF1(display, telaAtual - 42);
         }
     }
 

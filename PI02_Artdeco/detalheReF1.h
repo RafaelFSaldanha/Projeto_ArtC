@@ -3,5 +3,5 @@
 
 #include <allegro5/allegro.h>
 
-int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas);
+int detalheReF1(ALLEGRO_DISPLAY* display, int level);
 #endif

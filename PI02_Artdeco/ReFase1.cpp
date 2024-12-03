@@ -26,6 +26,7 @@ int makeRowHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO
     std::string hintRow;
     int conjuntoRow;
     int offset;
+    int maior = 1;
 
     for (int j = 0; j < gameHeight; j++) {
         conjuntoRow = 0;
@@ -33,7 +34,9 @@ int makeRowHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO
         offset = 0;
 
         for (int i = gameWidth-1; i >= 0; i--) {
-            if (coords[j][i] == 1) { conjuntoRow++; }
+            if (coords[j][i] == 1) { 
+                conjuntoRow++; 
+            }
             if ((coords[j][i] == 0 or i == 0) and conjuntoRow > 0) {
                 hintRow = std::to_string(conjuntoRow);
                 conjuntoRow = 0;
@@ -41,7 +44,7 @@ int makeRowHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO
                 int x = startX - offset * square;
                 int y = square + j * square + startY;
                 al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
-                al_draw_text(font, al_map_rgb(0, 0, 0), x, y - 7, 0, hintRow.c_str());
+                al_draw_text(font, al_map_rgb(0, 0, 0), x, y - 2, 0, hintRow.c_str());
                 offset++;
             }
             else if (hintRow == "" and i == 0) {
@@ -50,24 +53,30 @@ int makeRowHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO
                 int x = startX - offset * square;
                 int y = square + j * square + startY;
                 al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
-                al_draw_text(font, al_map_rgb(0, 0, 0), x, y - 7, 0, hintRow.c_str());
+                al_draw_text(font, al_map_rgb(0, 0, 0), x, y - 2, 0, hintRow.c_str());
             }
+            if (maior < offset) { maior = offset - 1; }
         }
     }
-    return 0;
+    return maior;
 }
 
 int makeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO_BITMAP* boxes[], int gameWidth, int gameHeight, std::vector<std::vector<int>> coords) {
     std::string hintCol;
     int conjuntoCol;
     int offset;
+    int maior = 1;
+
+
     for (int j = 0; j < gameWidth; j++) {
         conjuntoCol = 0;
         hintCol = "";
         offset = 0;
 
         for (int i = gameHeight-1; i >= 0; i--) {
-            if (coords[i][j] == 1) { conjuntoCol++; }
+            if (coords[i][j] == 1) {
+                conjuntoCol++; 
+            }
             if ((coords[i][j] == 0 or i == 0) and conjuntoCol > 0) {
                 hintCol = std::to_string(conjuntoCol);
                 conjuntoCol = 0;
@@ -75,7 +84,7 @@ int makeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO
                 int x = square + j * square + startX;
                 int y = startY - offset * square;
                 al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
-                al_draw_text(font, al_map_rgb(0, 0, 0), x, y-7, 0, hintCol.c_str());
+                al_draw_text(font, al_map_rgb(0, 0, 0), x + 2, y - 2, 0, hintCol.c_str());
                 offset++;
             }
             else if (hintCol == "" and i == 0) {
@@ -84,15 +93,17 @@ int makeColHints(int startX, int startY, ALLEGRO_FONT* font, int square, ALLEGRO
                 int x = square + j * square + startX;
                 int y = startY - offset * square;
                 al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
-                al_draw_text(font, al_map_rgb(0, 0, 0), x, y-7, 0, hintCol.c_str());
+                al_draw_text(font, al_map_rgb(0, 0, 0), x + 2, y - 2, 0, hintCol.c_str());
             }
+            if (maior < offset) { maior = offset - 1; }
 
         }
     }
-    return 0;
+    return maior;
 }
 
-int gridLogic(int startX, int startY, int square, int gameWidth, int gameHeight, ALLEGRO_BITMAP* boxes[], ALLEGRO_FONT* font, int mouseX, int mouseY, int mouse, std::vector<std::vector<int>> coords, std::vector<std::vector<int>>& playerCoords, int *playerBlacks, int *playerLifes) {
+int gridLogic(int startX, int startY, int square, int gameWidth, int gameHeight, ALLEGRO_BITMAP* boxes[], ALLEGRO_FONT* font, int mouseX, int mouseY, int mouse, std::vector<std::vector<int>> coords, std::vector<std::vector<int>>& playerCoords, int *playerBlacks, int *playerLifes, ALLEGRO_BITMAP* canvas, ALLEGRO_DISPLAY* display, ALLEGRO_BITMAP* hintsCanvas, int Mx, int My) {
+    al_set_target_bitmap(canvas);
     int width = gameWidth + 1;
     int height = gameHeight + 1;
 
@@ -132,12 +143,16 @@ int gridLogic(int startX, int startY, int square, int gameWidth, int gameHeight,
             }
             else {
                 al_draw_scaled_bitmap(boxes[2], 0, 0, al_get_bitmap_width(boxes[2]), al_get_bitmap_height(boxes[2]), x, y, square, square, 0);
-                makeRowHints(startX, startY, font, square, boxes, gameWidth, gameHeight, coords);
-                makeColHints(startX, startY, font, square, boxes, gameWidth, gameHeight, coords);
             }
-
         }
     }
+    
+    al_set_target_bitmap(al_get_backbuffer(display));
+    al_draw_filled_rectangle(width * square + startX, height * square + startY, startX - Mx * square, startY - My * square, al_map_rgb(200, 200, 200));
+    al_draw_bitmap(canvas, 0, 0, 0);
+    al_draw_bitmap(hintsCanvas, 0, 0, 0);
+    
+
     return 0;
 }
 int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen) {
@@ -172,8 +187,11 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
 
     int gameBlacks = 0;
     int playerBlacks = 0;
-    int playerLifes = 5000000;
-    
+    int playerLifes = 5;
+    int pause = false;
+    double beforeTime = al_get_time();
+    double nowTime;
+
     for (int i = 0; i < gameWidth; i++) {
         for (int j = 0; j < gameHeight; j++) {
             playerCoords[j][i] = 0;
@@ -198,11 +216,15 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
     ALLEGRO_BITMAP* relogio = al_load_bitmap("./assets/img/relogio.png");
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
 
+    ALLEGRO_BITMAP* hintsCanvas = al_create_bitmap(now_w, now_h);
+    int Mx = -1;
+    int My = -1;
     while (true) {
 
         ALLEGRO_EVENT event;
         al_wait_for_event(event_queue, &event);
         if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+            novaTela = 0;
             break;
         }
 
@@ -236,28 +258,17 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5 * scale_x, 155 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 150 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
 
-        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
-            r = 228;
-            g = 195;
-            b = 78;
-            if (mouseB == 1) {
-                r = 196; g = 196; b = 196;
-            }
-        }
-        else { r = 196; g = 196; b = 196; }
-
-        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30* scale_y, al_map_rgba(0, 0, 0, 70));
-        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30* scale_y, al_map_rgb(r, g, b));
-        al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
-        al_draw_text(font_text, al_map_rgba(0, 0, 0, 70), 297 * scale_x, 170 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), 300 * scale_x, 167 * scale_y, ALLEGRO_ALIGN_CENTER, "?");
-
         if (mouseX > 1620 * scale_x && mouseX < 1680 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
             r = 228;
             g = 195;
             b = 78;
             if (mouseB == 1) {
-                r = 196; g = 196; b = 196;
+                nowTime = al_get_time();
+                if(nowTime - beforeTime >= 0.25){
+                    pause = ~pause;
+                    beforeTime = nowTime;
+                }
+               
             }
         }
         else { r = 196; g = 196; b = 196; }
@@ -279,57 +290,96 @@ int fase(ALLEGRO_DISPLAY* display, int *pFasesDesb, int level, int returnScreen)
         al_draw_text(font_text2, al_map_rgb(0, 0, 0), 475 * scale_x, 590 * scale_y, ALLEGRO_ALIGN_CENTER, "Vidas");
         al_draw_text(font_text2, al_map_rgb(0, 0, 0), 475 * scale_x, 680 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
           
-        al_draw_filled_rectangle(now_w / 2 - 225 * scale_x, 350 * scale_y, now_w / 2 + 225 * scale_x, 800 * scale_y, al_map_rgb(255, 255, 255));
-        al_draw_rectangle(now_w / 2 - 225 * scale_x, 350 * scale_y, now_w / 2 + 225 * scale_x, 800 * scale_y, al_map_rgb(0, 0, 0), 1);
-
-        int squareS;
-        if (gameWidth < gameHeight) { squareS = (int)round(450 * scale_y / (gameHeight + 1)); }
-        else { squareS = (int)round(450 * scale_x / (gameWidth + 1)); }
-        ALLEGRO_FONT* fontHint = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", squareS, 0);
-        
-        if (playerLifes > 0) {
-            int x0 = (int)round(now_w / 2 - 112 * scale_x);
-            int y0 = (int)round(350 * scale_y);
-            
-            gridLogic(x0, y0, squareS, gameWidth, gameHeight, boxes, fontHint, mouseX, mouseY, mouseB, coords, playerCoords, &playerBlacks, &playerLifes);
-            if (gameBlacks == playerBlacks) { *pFasesDesb = 1; break; }
-        }
-        else{ 
-        //GAME OVER LOGIC HERE GUYS
-        }
-
-
-        //al_draw_scaled_bitmap(relogio, 0, 0, al_get_bitmap_width(relogio), al_get_bitmap_height(relogio), 1325 * scale_x, 360 * scale_y, 50 * scale_x, 50 * scale_y, 0);
-        //al_draw_filled_rectangle(now_w / 2 + 427.5 * scale_x, 350 * scale_y, now_w / 2 + 577.5 * scale_x, 420 * scale_y, al_map_rgba(240, 209, 86, 70));
-        //al_draw_rectangle(now_w / 4 - 150 * scale_x, 350 * scale_y, now_w / 4 + 150 * scale_x, 575 * scale_y, al_map_rgb(0, 0, 0), 1);
-        //al_draw_text(font_text2, al_map_rgb(0, 0, 0), 1460 * scale_x, 360 * scale_y, ALLEGRO_ALIGN_CENTER, "7:21");
-        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
-            r = 228;
-            g = 195;
-            b = 78;
+        //CHEAT SQUARE - clique nessa região e passe a tela automaticamente (DEBUG)
+        //al_draw_filled_rectangle(now_w - 50 * scale_x, 150 * scale_y, now_w, 220 * scale_y, al_map_rgb(255, 255, 255));
+        if (mouseX > now_w - 50 * scale_x && mouseX < now_w && mouseY >  150 * scale_y && mouseY < 220 * scale_y) {
             if (mouseB == 1) {
-                r = 196; g = 196; b = 196;
-                novaTela = 1;
-                break;
+                playerBlacks = gameBlacks;
             }
         }
         else { r = 196; g = 196; b = 196; }
 
-        al_draw_filled_circle(295 * scale_x, 205 * scale_y, 30 * scale_y, al_map_rgba(0, 0, 0, 70));
-        al_draw_filled_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(r, g, b));
-        al_draw_circle(300 * scale_x, 200 * scale_y, 30 * scale_y, al_map_rgb(0, 0, 0), 1.5);
-        al_draw_scaled_bitmap(back, 0, 0, al_get_bitmap_width(back), al_get_bitmap_height(back), 278 * scale_x, 180 * scale_y, 40 * scale_x, 40 * scale_y, 0);
+        int squareS;
+        if (gameWidth < gameHeight) { squareS = (int)round(450 * scale_y / (gameHeight + 1)); }
+        else { squareS = (int)round(450 * scale_x / (gameWidth + 1)); }
+        ALLEGRO_FONT* fontHint = al_load_font("./assets/fonts/CinzelDecorative-Regular.ttf", squareS + 1*scale_y, 0);
+        
+        if (pause == false) {
+            if (playerLifes > 0) {
+                int x0 = (int)round(now_w / 2 - 112 * scale_x);
+                int y0 = (int)round(350 * scale_y);
+                ALLEGRO_BITMAP* canvas = al_create_bitmap(now_w, now_h);
+
+                if (Mx == -1) {
+                    al_set_target_bitmap(hintsCanvas);
+                    Mx = makeRowHints(x0, y0, fontHint, squareS, boxes, gameWidth, gameHeight, coords);
+                    My = makeColHints(x0, y0, fontHint, squareS, boxes, gameWidth, gameHeight, coords);
+                    al_set_target_bitmap(al_get_backbuffer(display));
+                }
 
 
+                gridLogic(x0, y0, squareS, gameWidth, gameHeight, boxes, fontHint, mouseX, mouseY, mouseB, coords, playerCoords, &playerBlacks, &playerLifes, canvas, display, hintsCanvas, Mx, My);
+                if (gameBlacks == playerBlacks) {
+                    *pFasesDesb = 1;
+                    al_draw_text(font_text2, al_map_rgb(0, 0, 0), now_w / 2, 210 * scale_y, ALLEGRO_ALIGN_CENTER, "Quadro Completo!");
+                }
+                al_destroy_bitmap(canvas);
+            }
+            else {
+                al_draw_text(font_text2, al_map_rgb(0, 0, 0), now_w / 2, 210 * scale_y, ALLEGRO_ALIGN_CENTER, "Game Over");
+            }
+        }
+        else {
+            al_draw_filled_rectangle(now_w / 2 - 250 * scale_x, now_h/2 - 200 * scale_y, now_w / 2 + 250 * scale_x, now_h/2 + 100 * scale_y, al_map_rgb(255, 255, 255));
+            al_draw_rectangle(now_w / 2 - 250 * scale_x, now_h/2 - 200 * scale_y, now_w / 2 + 250 * scale_x, now_h/2 + 100 * scale_y, al_map_rgb(0, 0, 0), 1);
+            al_draw_text(font_text2, al_map_rgb(0, 0, 0), now_w / 2, now_h/2 - 180 * scale_y, ALLEGRO_ALIGN_CENTER, "Menu");
+
+
+            if (mouseX > now_w / 2 - 150 * scale_x && mouseX < now_w / 2 + 150 * scale_x && mouseY > now_h / 2 - 100 * scale_y && mouseY < now_h / 2 - 20 * scale_y){
+                r = 225;
+                g = 190;
+                b = 0;
+                if (mouseB == 1) {
+                    if (gameBlacks != playerBlacks) {novaTela = level + 12;}
+                    else if (level < 29) { novaTela = level + 13; }
+                    else { novaTela = 11; }
+                    break;
+                }
+            }
+            else { r = 0; g = 0; b = 0; }
+            al_draw_filled_rectangle(now_w / 2 - 150 * scale_x, now_h / 2 - 100 * scale_y, now_w / 2 + 150 * scale_x, now_h / 2 - 20 * scale_y, al_map_rgb(50, 116, 177));
+            al_draw_rectangle(now_w / 2 - 150 * scale_x, now_h / 2 - 100 * scale_y, now_w / 2 + 150 * scale_x, now_h / 2 - 20 * scale_y, al_map_rgb(0, 0, 0), 1);
+            if (gameBlacks != playerBlacks) { snprintf(buffer, sizeof(buffer), "Reiniciar"); }
+            else if (level < 29) { snprintf(buffer, sizeof(buffer), "Próxima Fase"); }
+            else{ snprintf(buffer, sizeof(buffer), "Galeria"); }
+            al_draw_text(font_text2, al_map_rgb(r, g, b), now_w / 2, now_h / 2 - 85 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
+
+            if (mouseX > now_w / 2 - 150 * scale_x && mouseX < now_w / 2 + 150 * scale_x && mouseY > now_h / 2 && mouseY < now_h / 2 + 80 * scale_y) {
+                r = 225;
+                g = 190;
+                b = 0;
+                if (mouseB == 1) {
+                    novaTela = returnScreen;
+                    break;
+                }
+            }
+            else { r = 0; g = 0; b = 0; }
+            al_draw_filled_rectangle(now_w / 2 - 150 * scale_x, now_h / 2, now_w / 2 + 150 * scale_x, now_h / 2 + 80 * scale_y, al_map_rgb(50, 116, 177));
+            al_draw_rectangle(now_w / 2 - 150 * scale_x, now_h / 2, now_w / 2 + 150 * scale_x, now_h / 2 + 80 * scale_y, al_map_rgb(0, 0, 0), 1);
+            al_draw_text(font_text2, al_map_rgb(r, g, b), now_w / 2, now_h / 2 + 15 * scale_y, ALLEGRO_ALIGN_CENTER, "Sair");
+
+        }
 
         al_flip_display();
         al_destroy_font(font_tittle);
         al_destroy_font(font_text);
         al_destroy_font(font_text2);
         al_destroy_font(fontHint);
+        
     }
 
     al_destroy_bitmap(moldura);
+    al_destroy_bitmap(hintsCanvas);
     al_destroy_event_queue(event_queue);
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);

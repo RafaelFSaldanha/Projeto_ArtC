@@ -10,7 +10,7 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
+int detalheReF1(ALLEGRO_DISPLAY* display, int level) {
 
     int now_w = al_get_display_width(display);
     int now_h = al_get_display_height(display);
@@ -79,7 +79,7 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
         al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 200 * scale_y, now_w / 2 + 650 * scale_x, 820 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 203 * scale_y, now_w / 2 + 647 * scale_x, 817 * scale_y, al_map_rgba(228, 195, 78, 70));
         
-        //Título
+        //Tï¿½tulo
         al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 215 * scale_y, now_w / 2 + 650 * scale_x, 260 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 218 * scale_y, now_w / 2 + 647 * scale_x, 257 * scale_y, al_map_rgb(74, 130, 172));
 
@@ -93,7 +93,7 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
         getAutor(level, buffer, sizeof(buffer));
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 + 215 * scale_x, 300 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
         
-        //Localização
+        //Localizaï¿½ï¿½o
         al_draw_filled_rectangle(now_w / 2 - 220 * scale_x, 375 * scale_y, now_w / 2 + 650 * scale_x, 420 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 217 * scale_x, 378 * scale_y, now_w / 2 + 647 * scale_x, 417 * scale_y, al_map_rgb(74, 130, 172));
 
@@ -107,7 +107,7 @@ int detalheReF1(ALLEGRO_DISPLAY* display, int level, int descLinhas) {
         getAno(level, buffer, sizeof(buffer));
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 + 215 * scale_x, 460 * scale_y, ALLEGRO_ALIGN_CENTER, buffer);
 
-        for (int i = 0; i < descLinhas; i++) {
+        for (int i = 0; i < getLinha(level); i++) {
             getDesc(level, i, buffer, sizeof(buffer));
             al_draw_text(font_text, al_map_rgb(0, 0, 0), 800 * scale_x, (550 + 40 * i) * scale_y, 0, buffer);
         }

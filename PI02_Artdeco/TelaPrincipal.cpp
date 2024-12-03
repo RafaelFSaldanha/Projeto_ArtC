@@ -8,7 +8,7 @@
 const int WIDTH = 1920;
 const int HEIGHT = 985;
 
-int telaInicial(ALLEGRO_DISPLAY* display) {
+int telaInicial(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
 
     int now_w = al_get_display_width(display);
     int now_h = al_get_display_height(display);
@@ -38,7 +38,13 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
     ALLEGRO_BITMAP* noite_estrelada = al_load_bitmap("./assets/img/noite_estrelada.png");
     ALLEGRO_BITMAP* bandeirantes = al_load_bitmap("./assets/img/retirantes.png");
     int novaTela = 0;
- 
+    int jogarTela = 0;
+    for (int i = 0; i < 30; i++) {
+        if(quadrosDesb[i] == 0){
+            jogarTela = i;
+            break;
+        }
+    }
 
     while (true) {
         ALLEGRO_EVENT event;
@@ -83,7 +89,7 @@ int telaInicial(ALLEGRO_DISPLAY* display) {
             b = 0;
             if (mouseB == 1) {
                 r = 0; g = 0; b = 0;
-                novaTela = 12;
+                novaTela = jogarTela + 12;
                 break;
             }
         }

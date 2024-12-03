@@ -77,18 +77,18 @@ int cubismo(ALLEGRO_DISPLAY* display) {
         al_draw_text(font_tittle, al_map_rgba(0, 0, 0, 70), now_w / 2 - 5, 205 * scale_x, ALLEGRO_ALIGN_CENTER, "Cubismo");
         al_draw_text(font_tittle, al_map_rgb(0, 0, 0), now_w / 2, 200 * scale_x, ALLEGRO_ALIGN_CENTER, "Cubismo");
 
-        al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 300 * scale_y, 1680 * scale_x, 450 * scale_y, al_map_rgba(0, 0, 0, 70));
-        al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 305 * scale_y, 1675 * scale_x, 445 * scale_y, al_map_rgba(228, 195, 78, 70));
+        al_draw_filled_rectangle(now_w / 4 - 240, 300 * scale_y, 1680 * scale_x, 450 * scale_y, al_map_rgba(0, 0, 0, 70));
+        al_draw_filled_rectangle(now_w / 4 - 235, 305 * scale_y, 1675 * scale_x, 445 * scale_y, al_map_rgba(228, 195, 78, 70));
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 320 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Movimento revolucionário do início do século XX que fragmentava e geometrizava as");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 350 * scale_y, ALLEGRO_ALIGN_CENTER, u8"formas, apresentando objetos simultaneamente de vários ângulos. Rompeu com a");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 380 * scale_y, ALLEGRO_ALIGN_CENTER, u8"perspectiva tradicional e influenciou profundamente a arte moderna. Desenvolveu-se em");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 410 * scale_y, ALLEGRO_ALIGN_CENTER, u8"duas fases: analítica e sintética. Principais artistas: Pablo Picasso e Georges Braque.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 320 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Movimento revolucionï¿½rio do inï¿½cio do sï¿½culo XX que fragmentava e geometrizava as");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 350 * scale_y, ALLEGRO_ALIGN_CENTER, u8"formas, apresentando objetos simultaneamente de vï¿½rios ï¿½ngulos. Rompeu com a");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 380 * scale_y, ALLEGRO_ALIGN_CENTER, u8"perspectiva tradicional e influenciou profundamente a arte moderna. Desenvolveu-se em");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 410 * scale_y, ALLEGRO_ALIGN_CENTER, u8"duas fases: analï¿½tica e sintï¿½tica. Principais artistas: Pablo Picasso e Georges Braque.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));
 
-        if (mouseX > 264 && mouseX < 504 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 264 * scale_x && mouseX < 504 * scale_x && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -106,7 +106,7 @@ int cubismo(ALLEGRO_DISPLAY* display) {
         al_draw_scaled_bitmap(img1, 0, 0, al_get_bitmap_width(img1), al_get_bitmap_height(img1), 264 * scale_x, 525 * scale_y, 240 * scale_x, 250 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 1");
 
-        if (mouseX > 567 && mouseX < 777 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 567 * scale_x && mouseX < 777 * scale_x && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -124,7 +124,7 @@ int cubismo(ALLEGRO_DISPLAY* display) {
         al_draw_scaled_bitmap(img2, 0, 0, al_get_bitmap_width(img2), al_get_bitmap_height(img2), 567 * scale_x, 525 * scale_y, 210 * scale_x, 250 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 288 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 2");
 
-        if (mouseX > 860 && mouseX < 1060 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 860 * scale_x && mouseX < 1060 * scale_x && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -138,11 +138,11 @@ int cubismo(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 2 - 170 * scale_x, 465 * scale_y, now_w / 2 + 165 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 165 * scale_x, 470 * scale_y, now_w / 2 + 160 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "Retrato de Ambroise Vollard");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 475 * scale_y, ALLEGRO_ALIGN_CENTER, "Retrato de Ambroise Vollard");
         al_draw_scaled_bitmap(img3, 0, 0, al_get_bitmap_width(img3), al_get_bitmap_height(img3), now_w / 2 - 100 * scale_x, 525 * scale_y, 200 * scale_x, 250 * scale_y, 0);
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 3");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 3");
 
-        if (mouseX > 1142 && mouseX < 1352 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 1142 * scale_x && mouseX < 1352 * scale_x && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -160,7 +160,7 @@ int cubismo(ALLEGRO_DISPLAY* display) {
         al_draw_scaled_bitmap(img4, 0, 0, al_get_bitmap_width(img4), al_get_bitmap_height(img4), 1142 * scale_x, 525 * scale_y, 210 * scale_x, 250 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 288 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 4");
 
-        if (mouseX > 1436 && mouseX < 1636 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 1436 * scale_x && mouseX < 1636 * scale_x && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;

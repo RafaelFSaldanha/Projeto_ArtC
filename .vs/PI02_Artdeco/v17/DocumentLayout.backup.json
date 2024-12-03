@@ -1,10 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\",
+  "WorkspaceRootPath": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\ReFase1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\carrossel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\carrossel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\LevelData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\LevelData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\PI02_Artdeco.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Renascentismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Renascentismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Vanguardas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\DetalhesObra.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\TelaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\TelaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Carrossel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Carrossel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\ReFase1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Cubismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Cubismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Expressionismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Expressionismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Futurismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Futurismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Impressionismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Impressionismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Surrealismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\Surrealismo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DetalheReF1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\DetalheReF1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\detalheReF1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\detalheReF1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DescData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\DescData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DescData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9F649CD8-1E3D-4AB9-9B65-4ED1585DEBBC}|PI02_Artdeco\\PI02_Artdeco.vcxproj|solutionrelative:PI02_Artdeco\\DescData.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +90,264 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 19,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vanguardas.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Vanguardas.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Vanguardas.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Vanguardas.cpp",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFcAAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T19:45:22.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DetalhesObra.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\DetalhesObra.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DetalhesObra.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\DetalhesObra.cpp",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFoAAACNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T19:44:20.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TelaPrincipal.h",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.h",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\TelaPrincipal.h",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.h",
+              "RelativeToolTip": "PI02_Artdeco\\TelaPrincipal.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-02T19:01:03.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Carrossel.h",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Carrossel.h",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Carrossel.h",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Carrossel.h",
+              "RelativeToolTip": "PI02_Artdeco\\Carrossel.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-02T19:00:55.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReFase1.h",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.h",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\ReFase1.h",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.h",
+              "RelativeToolTip": "PI02_Artdeco\\ReFase1.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-02T19:00:44.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TelaPrincipal.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\TelaPrincipal.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\TelaPrincipal.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\TelaPrincipal.cpp",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T18:48:42.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Surrealismo.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Surrealismo.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Surrealismo.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Surrealismo.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Surrealismo.cpp",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAYwIsAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T17:31:37.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Impressionismo.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Impressionismo.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Impressionismo.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Impressionismo.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Impressionismo.cpp",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAQwIwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T17:30:34.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Futurismo.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Futurismo.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Futurismo.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Futurismo.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Futurismo.cpp",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAQwIwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T17:29:35.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Expressionismo.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Expressionismo.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Expressionismo.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Expressionismo.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Expressionismo.cpp",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAQwI4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T17:28:00.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cubismo.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Cubismo.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Cubismo.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Cubismo.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Cubismo.cpp",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAQwIwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T17:26:08.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "detalheReF1.h",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\detalheReF1.h",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\detalheReF1.h",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\detalheReF1.h",
+              "RelativeToolTip": "PI02_Artdeco\\detalheReF1.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-02T17:13:26.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DetalheReF1.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DetalheReF1.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\DetalheReF1.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DetalheReF1.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\DetalheReF1.cpp",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAwG0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T16:59:43.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "carrossel.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\carrossel.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\carrossel.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\carrossel.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\carrossel.cpp",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-02T16:59:04.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DescData.h",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DescData.h",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\DescData.h",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DescData.h",
+              "RelativeToolTip": "PI02_Artdeco\\DescData.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-02T16:55:19.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DescData.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DescData.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\DescData.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\DescData.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\DescData.cpp",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAMcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-01T02:33:51.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Renascentismo.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Renascentismo.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\Renascentismo.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\Renascentismo.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\Renascentismo.cpp",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-01T02:28:43.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PI02_Artdeco.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\PI02_Artdeco.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\PI02_Artdeco.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\PI02_Artdeco.cpp",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF4AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-01T02:28:00.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LevelData.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\LevelData.cpp",
+              "RelativeDocumentMoniker": "PI02_Artdeco\\LevelData.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\LevelData.cpp",
+              "RelativeToolTip": "PI02_Artdeco\\LevelData.cpp",
+              "ViewState": "AgIAAMoCAAAAAAAAAAAuwNECAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-01T02:24:24.512Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ReFase1.cpp",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.cpp",
+              "DocumentMoniker": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.cpp",
               "RelativeDocumentMoniker": "PI02_Artdeco\\ReFase1.cpp",
-              "ToolTip": "C:\\Users\\rafae\\Documents\\Estudo T.I\\Senac\\Semestre2\\PI 2\\aula\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.cpp",
+              "ToolTip": "C:\\Users\\Luqui\\Documents\\GitHub\\Projeto_ArtDeco\\PI02_Artdeco\\ReFase1.cpp",
               "RelativeToolTip": "PI02_Artdeco\\ReFase1.cpp",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAAAEgBAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-24T22:54:39.263Z",
               "EditorCaption": ""

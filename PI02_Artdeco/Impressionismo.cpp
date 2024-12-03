@@ -80,15 +80,15 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 300 * scale_y, 1680 * scale_x, 450 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 305 * scale_y, 1675 * scale_x, 445 * scale_y, al_map_rgba(228, 195, 78, 70));
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Movimento artístico do final do século XIX que buscava captar a impressão imediata da luz");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 350 * scale_y, ALLEGRO_ALIGN_CENTER, "e do momento sobre os objetos. Caracterizado por pinceladas soltas, cores puras e temas");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 380 * scale_y, ALLEGRO_ALIGN_CENTER, "do cotidiano, principalmente paisagens. Revolucionou a pintura ao ar livre. Principais");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 * scale_x, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "artistas: Claude Monet e Pierre-Auguste Renoir.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Movimento artístico do final do século XIX que buscava captar a impressão imediata da luz");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 350 * scale_y, ALLEGRO_ALIGN_CENTER, "e do momento sobre os objetos. Caracterizado por pinceladas soltas, cores puras e temas");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 380 * scale_y, ALLEGRO_ALIGN_CENTER, "do cotidiano, principalmente paisagens. Revolucionou a pintura ao ar livre. Principais");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "artistas: Claude Monet e Pierre-Auguste Renoir.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));
 
-        if (mouseX > 264 && mouseX < 504 && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
+        if (mouseX > 264 * scale_x && mouseX < 504 * scale_x && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -106,7 +106,7 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
         al_draw_scaled_bitmap(img1, 0, 0, al_get_bitmap_width(img1), al_get_bitmap_height(img1), 264 * scale_x, 560 * scale_y, 240 * scale_x, 180 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 1");
 
-        if (mouseX > 552 && mouseX < 792 && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
+        if (mouseX > 552 * scale_x && mouseX < 792 * scale_x && mouseY > 525 * scale_y && mouseY < 775 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -124,7 +124,7 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
         al_draw_scaled_bitmap(img2, 0, 0, al_get_bitmap_width(img2), al_get_bitmap_height(img2), 562 * scale_x, 525 * scale_y, 220 * scale_x, 250 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 288 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 2");
 
-        if (mouseX > 840 && mouseX < 1080 && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
+        if (mouseX > 840 * scale_x && mouseX < 1080 * scale_x && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -138,11 +138,11 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 2 - 140 * scale_x, 465 * scale_y, now_w / 2 + 140 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 135 * scale_x, 470 * scale_y, now_w / 2 + 135 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "A Estação Saint Lazare");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 475 * scale_y, ALLEGRO_ALIGN_CENTER, "A Estação Saint Lazare");
         al_draw_scaled_bitmap(img3, 0, 0, al_get_bitmap_width(img3), al_get_bitmap_height(img3), now_w / 2 - 120 * scale_x, 560 * scale_y, 240 * scale_x, 180 * scale_y, 0);
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 3");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 3");
 
-        if (mouseX > 1128 && mouseX < 1368 && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
+        if (mouseX > 1128 * scale_x && mouseX < 1368 * scale_x && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -160,7 +160,7 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
         al_draw_scaled_bitmap(img4, 0, 0, al_get_bitmap_width(img4), al_get_bitmap_height(img4), 1128 * scale_x, 560 * scale_y, 240 * scale_x, 180 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 + 288 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 4");
 
-        if (mouseX > 1416 && mouseX < 1656 && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
+        if (mouseX > 1416 * scale_x && mouseX < 1656 * scale_x && mouseY > 560 * scale_y && mouseY < 740 * scale_y) {
             r = 225;
             g = 190;
             b = 0;

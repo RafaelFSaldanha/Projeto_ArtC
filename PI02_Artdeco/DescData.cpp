@@ -197,6 +197,14 @@ void getQuadro(int level, char* buffer, size_t tamanho) {
 
 }
 
+int getLinha(int level) {
+	if (level == 0 || level == 2 || level == 3 || level == 6 || level == 7 || level == 8 || level == 9 || level == 21 || level == 25 || level == 28) { return 4; }
+	else if (level == 1 || level == 5 || level == 26 || level == 27) { return 5; }
+	else if (level == 10 || level == 12 || level == 13 || level == 14 || level == 15 || level == 16 || level == 19 || level == 20 || level == 23 || level == 24) { return 3; }
+	else if (level == 11 || level == 17 || level == 18) { return 2; }
+	else if (level == 22 || level == 29) { return 6; }
+}
+
 void getDesc(int level, int linha, char* buffer, size_t tamanho) {
 	std::vector<std::string> desc;
 	if (level == 0) {

@@ -56,8 +56,6 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
     char buffer[50];
     ALLEGRO_BITMAP* quadroMeio = al_load_bitmap("");
 
-  
-    
     while (true) {
         ALLEGRO_BITMAP* quadroEsquerda = al_load_bitmap("");
         ALLEGRO_BITMAP* quadroDireita = al_load_bitmap("");
@@ -65,7 +63,9 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         ALLEGRO_EVENT event;
         al_wait_for_event(event_queue, &event);
         if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+            telaNova = 0;
             break;
+
         }
 
         if (event.type == ALLEGRO_EVENT_DISPLAY_RESIZE) {
@@ -197,13 +197,13 @@ int carrossel(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         al_destroy_font(font_options);
         al_destroy_bitmap(quadroEsquerda);
         al_destroy_bitmap(quadroDireita);
+        al_destroy_bitmap(quadroMeio);
     }
 
     al_destroy_bitmap(moldura);
     al_destroy_event_queue(event_queue);
     al_destroy_mouse_cursor(cursor);
     al_destroy_bitmap(pincel_cursor);
-    al_destroy_bitmap(quadroMeio);
 
     return telaNova;
 }
