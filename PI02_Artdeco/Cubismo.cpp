@@ -80,10 +80,10 @@ int cubismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 4 - 240, 300 * scale_y, 1680 * scale_x, 450 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_rectangle(now_w / 4 - 235, 305 * scale_y, 1675 * scale_x, 445 * scale_y, al_map_rgba(228, 195, 78, 70));
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 320 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Movimento revolucion�rio do in�cio do s�culo XX que fragmentava e geometrizava as");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 350 * scale_y, ALLEGRO_ALIGN_CENTER, u8"formas, apresentando objetos simultaneamente de v�rios �ngulos. Rompeu com a");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 380 * scale_y, ALLEGRO_ALIGN_CENTER, u8"perspectiva tradicional e influenciou profundamente a arte moderna. Desenvolveu-se em");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 410 * scale_y, ALLEGRO_ALIGN_CENTER, u8"duas fases: anal�tica e sint�tica. Principais artistas: Pablo Picasso e Georges Braque.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Movimento revolucionário do início do século XX que fragmentava e geometrizava as");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 350 * scale_y, ALLEGRO_ALIGN_CENTER, "formas, apresentando objetos simultaneamente de vários ângulos. Rompeu com a");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 380 * scale_y, ALLEGRO_ALIGN_CENTER, "perspectiva tradicional e influenciou profundamente a arte moderna. Desenvolveu-se em");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "duas fases: analítica e sintética. Principais artistas: Pablo Picasso e Georges Braque.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));

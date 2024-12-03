@@ -83,7 +83,7 @@ int impressionismo(ALLEGRO_DISPLAY* display) {
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Movimento artístico do final do século XIX que buscava captar a impressão imediata da luz");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 350 * scale_y, ALLEGRO_ALIGN_CENTER, "e do momento sobre os objetos. Caracterizado por pinceladas soltas, cores puras e temas");
         al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 380 * scale_y, ALLEGRO_ALIGN_CENTER, "do cotidiano, principalmente paisagens. Revolucionou a pintura ao ar livre. Principais");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "artistas: Claude Monet e Pierre-Auguste Renoir.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2, 410 * scale_y, ALLEGRO_ALIGN_CENTER, "artistas: Claude Monet e Pierre-Auguste Renoir.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));

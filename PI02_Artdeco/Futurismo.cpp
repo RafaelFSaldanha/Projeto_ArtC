@@ -80,10 +80,10 @@ int futurismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 300 * scale_y, 1680 * scale_x, 450 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 305 * scale_y, 1675 * scale_x, 445 * scale_y, al_map_rgba(228, 195, 78, 70));
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 320 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Vanguarda italiana do in�cio do s�culo XX que celebrava a velocidade, tecnologia,");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 350 * scale_y, ALLEGRO_ALIGN_CENTER, u8"juventude e viol�ncia da era moderna. Rejeitava tradi��es art�sticas anteriores e buscava");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 380 * scale_y, ALLEGRO_ALIGN_CENTER, u8"representar o movimento e dinamismo em suas obras. Usava formas fragmentadas e linhas");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 410 * scale_y, ALLEGRO_ALIGN_CENTER, u8"de for�a. Principais artistas: Marinetti e Boccioni.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Vanguarda italiana do início do século XX que celebrava a velocidade, tecnologia,");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 350 * scale_y, ALLEGRO_ALIGN_CENTER, "juventude e violência da era moderna. Rejeitava tradições artísticas anteriores e buscava");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 380 * scale_y, ALLEGRO_ALIGN_CENTER, "representar o movimento e dinamismo em suas obras. Usava formas fragmentadas e linhas");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 410 * scale_y, ALLEGRO_ALIGN_CENTER, "de força. Principais artistas: Marinetti e Boccioni.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));
@@ -102,7 +102,7 @@ int futurismo(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 4 - 270 * scale_x, 465 * scale_y, now_w / 2 - 400 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 265 * scale_x, 470 * scale_y, now_w / 2 - 405 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Dinamismo de um C�o na Coleira");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "Dinamismo de um Cão na Coleira");
         al_draw_scaled_bitmap(img1, 0, 0, al_get_bitmap_width(img1), al_get_bitmap_height(img1), 264 * scale_x, 550 * scale_y, 240 * scale_x, 200 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 1");
 
@@ -138,7 +138,7 @@ int futurismo(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 2 - 110 * scale_x, 465 * scale_y, now_w / 2 + 110 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 2 - 105 * scale_x, 470 * scale_y, now_w / 2 + 105 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 475 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Solidez da N�voa");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 475 * scale_y, ALLEGRO_ALIGN_CENTER, "Solidez da Névoa");
         al_draw_scaled_bitmap(img3, 0, 0, al_get_bitmap_width(img3), al_get_bitmap_height(img3), now_w / 2 - 100 * scale_x, 525 * scale_y, 200 * scale_x, 250 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 , 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 3");
 

@@ -130,7 +130,7 @@ int telaInicial(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         else { r = 0; g = 0; b = 0; }
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 600 * scale_y, ALLEGRO_ALIGN_CENTER, "Galeria");
 
-        if (mouseX > now_w / 2 - 100 && mouseX < now_w / 2 + 100 && mouseY > 700 * scale_y && mouseY < 740 * scale_y) {
+        /*if (mouseX > now_w / 2 - 100 && mouseX < now_w / 2 + 100 && mouseY > 700 * scale_y && mouseY < 740 * scale_y) {
             r = 225;
             g = 190;
             b = 0;
@@ -144,7 +144,7 @@ int telaInicial(ALLEGRO_DISPLAY* display, int quadrosDesb[]) {
         else { r = 0; g = 0; b = 0; }
         al_draw_text(font_options, al_map_rgb(r, g, b), now_w / 2, 700 * scale_y, ALLEGRO_ALIGN_CENTER, "Opções");
 
-        /*if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
+        if (mouseX > 270 * scale_x && mouseX < 330 * scale_x && mouseY > 170 * scale_y && mouseY < 230 * scale_y) {
             r = 228;
             g = 195;
             b = 78;

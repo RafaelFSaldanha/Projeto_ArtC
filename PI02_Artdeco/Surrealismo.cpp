@@ -80,10 +80,10 @@ int surrealismo(ALLEGRO_DISPLAY* display) {
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 300 * scale_y, 1680 * scale_x, 450 * scale_y, al_map_rgba(0, 0, 0, 70));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 305 * scale_y, 1675 * scale_x, 445 * scale_y, al_map_rgba(228, 195, 78, 70));
 
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 320 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Movimento art�stico do s�culo XX que explorava o inconsciente, sonhos e o irracional.");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 350 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Inspirado nas teorias psicanal�ticas de Freud, buscava combinar elementos imposs�veis ou");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 380 * scale_y, ALLEGRO_ALIGN_CENTER, u8"il�gicos para criar novas realidades. Utilizava t�cnicas como automatismo e colagem.");
-        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 410 * scale_y, ALLEGRO_ALIGN_CENTER, u8"Principais artistas: Salvador Dal� e Ren� Magritte.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 320 * scale_y, ALLEGRO_ALIGN_CENTER, "Movimento artístico do século XX que explorava o inconsciente, sonhos e o irracional.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 350 * scale_y, ALLEGRO_ALIGN_CENTER, "Inspirado nas teorias psicanalíticas de Freud, buscava combinar elementos impossíveis ou");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 380 * scale_y, ALLEGRO_ALIGN_CENTER, "ilógicos para criar novas realidades. Utilizava técnicas como automatismo e colagem.");
+        al_draw_text(font_text, al_map_rgb(0, 0, 0), now_w / 2 , 410 * scale_y, ALLEGRO_ALIGN_CENTER, "Principais artistas: Salvador Dalí e René Magritte.");
 
         al_draw_filled_rectangle(now_w / 4 - 240 * scale_x, 790 * scale_y, 1680 * scale_x, 840 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 235 * scale_x, 795 * scale_y, 1675 * scale_x, 835 * scale_y, al_map_rgb(74, 130, 172));
@@ -102,7 +102,7 @@ int surrealismo(ALLEGRO_DISPLAY* display) {
 
         al_draw_filled_rectangle(now_w / 4 - 250 * scale_x, 465 * scale_y, now_w / 4 + 60 * scale_x, 510 * scale_y, al_map_rgb(0, 0, 0));
         al_draw_filled_rectangle(now_w / 4 - 245 * scale_x, 470 * scale_y, now_w / 4 + 55 * scale_x, 505 * scale_y, al_map_rgb(74, 130, 172));
-        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, u8"A Persist�ncia da Mem�ria");
+        al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 475 * scale_y, ALLEGRO_ALIGN_CENTER, "A Persistência da Memória");
         al_draw_scaled_bitmap(img1, 0, 0, al_get_bitmap_width(img1), al_get_bitmap_height(img1), 264 * scale_x, 560 * scale_y, 240 * scale_x, 180 * scale_y, 0);
         al_draw_text(font_text, al_map_rgb(r, g, b), now_w / 2 - 576 * scale_x, 800 * scale_y, ALLEGRO_ALIGN_CENTER, "Fase 1");
 

@@ -820,32 +820,32 @@ std::vector<std::vector<int>> criarMatriz(int level) {
 void faseTitle(int level, char* buffer, size_t tamanho) {
 
 	if(level == 0){ snprintf(buffer, tamanho, "Fase 1: Mona Lisa"); }
-	else if (level == 1) { snprintf(buffer, tamanho, u8"Fase 2: A cria��o de Ad�o"); }
+	else if (level == 1) { snprintf(buffer, tamanho, "Fase 2: A criação de Adão"); }
 	else if (level == 2) { snprintf(buffer, tamanho, "Fase 3: Escola de Atenas"); }
-	else if (level == 3) { snprintf(buffer, tamanho, u8"Fase 4: O Nascimento de V�nus"); }
-	else if (level == 4) { snprintf(buffer, tamanho, u8"Fase 5: A �ltima Ceia"); }
+	else if (level == 3) { snprintf(buffer, tamanho, "Fase 4: O Nascimento de Vênus"); }
+	else if (level == 4) { snprintf(buffer, tamanho, "Fase 5: A Última Ceia"); }
 
-	else if (level == 5) { snprintf(buffer, tamanho, u8"Fase 6: Impress�o, Sol Nascente"); }
+	else if (level == 5) { snprintf(buffer, tamanho, "Fase 6: Impressão, Sol Nascente"); }
 	else if (level == 6) { snprintf(buffer, tamanho, "Fase 7: Mulheres no Jardim"); }
-	else if (level == 7) { snprintf(buffer, tamanho, u8"Fase 8: A Esta��o Saint-Lazare"); }
+	else if (level == 7) { snprintf(buffer, tamanho, "Fase 8: A Estação Saint-Lazare"); }
 	else if (level == 8) { snprintf(buffer, tamanho, "Fase 9: Campo de Papoulas"); }
-	else if (level == 9) { snprintf(buffer, tamanho, u8"Fase 10: O Almo�o dos Remadores"); }
+	else if (level == 9) { snprintf(buffer, tamanho, "Fase 10: O Almoço dos Remadores"); }
 
-	else if (level == 10) { snprintf(buffer, tamanho, u8"Fase 11: A Persist�ncia da Mem�ria"); }
+	else if (level == 10) { snprintf(buffer, tamanho, "Fase 11: A Persistência da Memória"); }
 	else if (level == 11) { snprintf(buffer, tamanho, "Fase 12: O Filho do Homem"); }
 	else if (level == 12) { snprintf(buffer, tamanho, "Fase 13: O Grande Masturbador"); }
 	else if (level == 13) { snprintf(buffer, tamanho, "Fase 14: Os Amantes"); }
 	else if (level == 14) { snprintf(buffer, tamanho, "Fase 15: Os Elefantes"); }
 
-	else if (level == 15) { snprintf(buffer, tamanho, u8"Fase 16: Les Demoiselles d'Avignon"); }
+	else if (level == 15) { snprintf(buffer, tamanho, "Fase 16: Les Demoiselles d'Avignon"); }
 	else if (level == 16) { snprintf(buffer, tamanho, "Fase 17: Violinista"); }
 	else if (level == 17) { snprintf(buffer, tamanho, "Fase 18: Retrato de Ambroise Vollard"); }
 	else if (level == 18) { snprintf(buffer, tamanho, "Fase 19: Garrafa de Suze"); }
 	else if (level == 19) { snprintf(buffer, tamanho, "Fase 20: O Poeta"); }
 
-	else if (level == 20) { snprintf(buffer, tamanho, u8"Fase 21: Dinamismo de um C�o na Coleira"); }
+	else if (level == 20) { snprintf(buffer, tamanho, "Fase 21: Dinamismo de um Cão na Coleira"); }
 	else if (level == 21) { snprintf(buffer, tamanho, "Fase 22: A Cidade que Sobe"); }
-	else if (level == 22) { snprintf(buffer, tamanho, u8"Fase 23: Solidez da N�voa"); }
+	else if (level == 22) { snprintf(buffer, tamanho, "Fase 23: Solidez da Névoa"); }
 	else if (level == 23) { snprintf(buffer, tamanho, "Fase 24: Dinamismo de um Carro"); }
 	else if (level == 24) { snprintf(buffer, tamanho, "Fase 25: Elasticidade"); }
 

@@ -297,7 +297,7 @@ void getDesc(int level, int linha, char* buffer, size_t tamanho) {
 			"Uma cena de confraternização entre amigos à",
 			"beira de um rio.Renoir destaca a atmosfera",
 			"leve e despreocupada, usando cores vivas e",
-			"uma luz suave."
+			"uma luz suave."
 		};
 	}
 

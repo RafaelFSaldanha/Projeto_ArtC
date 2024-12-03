@@ -1,2 +1,3 @@
-﻿  ReFase1.cpp
-  PI02_Artdeco.vcxproj -> C:\Users\Luqui\Documents\GitHub\Projeto_ArtDeco\x64\Debug\PI02_Artdeco.exe
+﻿  DescData.cpp
+C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\PI02_Artdeco\DescData.cpp(206,1): warning C4715: 'getLinha': nem todos os caminhos de controle retornam um valor
+  PI02_Artdeco.vcxproj -> C:\Users\rafae\Documents\Estudo T.I\Senac\Semestre2\PI 2\aula\Projeto_ArtDeco\x64\Debug\PI02_Artdeco.exe
